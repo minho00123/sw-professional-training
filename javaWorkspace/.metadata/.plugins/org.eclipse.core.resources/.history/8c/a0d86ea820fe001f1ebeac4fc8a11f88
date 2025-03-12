@@ -1,0 +1,36 @@
+package com.am;
+
+class Car {
+	public String company="국산";
+	public String color="흰";
+	public String model="???";
+	public int speed;
+	public int max=100;
+	
+	public void speedUp(int a) {
+		if (speed+a*10>max) {
+			speed=100;
+		} else {
+			speed+=a*10;
+		}
+	}
+	public void speedDown() {
+		if (speed-15<0) {
+			speed=0;
+		} else {
+			speed-=15;
+		}
+	}
+	public void show() {
+		System.out.println("내차 "+model+"의 속도는 "+speed+"km");
+	}
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

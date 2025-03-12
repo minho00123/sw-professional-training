@@ -1,0 +1,16 @@
+package com.am;
+
+public class Ex01 {
+	Ex01 me2;
+	
+	public Ex01(String msg) {
+		System.out.println(msg);
+	}
+
+	public static void main(String[] args) {
+		char ch='\u0000'; // null
+		Ex01 me=null; // 참조 변수의 디폴트 값은 null이다. char의 디폴트 값인 null과 다른 값이다. char의 null은 문자, 참조 변수의 null은 키워드 null이다.
+		me=new Ex01("유니코드 0=>"); // 참조변수의 타입은 클래스이다.
+	}
+
+}

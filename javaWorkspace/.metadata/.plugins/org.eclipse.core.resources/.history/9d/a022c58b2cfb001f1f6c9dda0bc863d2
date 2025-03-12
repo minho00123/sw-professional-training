@@ -1,0 +1,11 @@
+package com.pm;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// 랜덤한 수
+		double su=Math.random()*3;
+		// 랜덤한 수의 범위: 0.0<=su<1.0
+		System.out.println(su);
+	}
+}

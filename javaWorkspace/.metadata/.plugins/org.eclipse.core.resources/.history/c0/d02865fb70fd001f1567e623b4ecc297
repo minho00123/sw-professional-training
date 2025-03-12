@@ -1,0 +1,23 @@
+package com.am;
+
+public class Ex08 {
+	// 
+	// 클래스 메서드, static 메서드, 함수...
+	// static 영역 - 패키지 경로.클래스명.메서드명으로 존재
+	// public static 리턴타입(void) 메서드명(매개변수...){구현;}
+	//
+	// 인스턴스 메서드, non-static 메서드, 멤버 메서드
+	// 힙 영역 - 객체로 존재
+	// public 리턴타입(void) 메서드명(매개변수...){구현;}
+	
+	public static void main(String[] args) {
+		// 메서드 - 함수
+		System.out.println(com.am.Ex07.func02());
+		System.out.println(Ex07.func02());
+	}
+	
+	public static void func02() {
+		System.out.println("난 아니지롱~~~");
+	}
+
+}

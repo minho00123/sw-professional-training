@@ -1,0 +1,22 @@
+package com.am;
+
+public class Ex02 {
+	
+	public Ex02() {
+		System.out.println("객체생성");
+		this.func01();
+	}
+
+	public static void main(String[] args) {
+		/*
+		 * Ex02 me=new Ex02();
+		 * me.func01();
+		 */
+		
+		new Ex02();	
+	}
+
+	public void func01() {
+		System.out.println("기능호출");
+	}
+}

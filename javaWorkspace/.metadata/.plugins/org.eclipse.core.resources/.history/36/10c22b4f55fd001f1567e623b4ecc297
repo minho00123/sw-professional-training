@@ -1,0 +1,18 @@
+package com.am;
+// 이 문서상의 내용은 패키지 위에 있다.
+
+
+public class Ex02 {
+	// 클래스의 구성요소
+	// 메서드 - 모든 일은 메서드 안에서 이루어진다.
+	
+	public static void main(String[] args) {
+		int a;
+		a=100;
+		System.out.println(a);
+	}
+	public static void func01() {
+		System.out.println("call...");
+	}
+
+}

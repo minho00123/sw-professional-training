@@ -1,0 +1,15 @@
+package com.am;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		int a1=2;
+		int a2=4;
+		int a3=6;
+		int a4=8;
+		
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.am;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// ±¸±¸´Ü
+		int dan=2;
+		for(int i=0; i<8; i++) {
+			System.out.println(dan+"x1 ");
+			dan++;
+		}
+	}
+
+}

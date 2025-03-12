@@ -1,0 +1,34 @@
+package com.am;
+// 이 문서상의 내용은 패키지 위에 있다.
+
+
+public class Ex02 {
+	// 클래스의 구성요소
+	// 메서드 - 모든 일은 메서드 안에서 이루어진다.
+	
+	public static void main(String[] args) {
+		System.out.print("출력");
+		System.out.println("출력");
+		// 변수의 사용은 반드시 선언과 초기화가 이루어져야만 사용가능
+		int a;  		// 변수 선언(메모리를 어떻게 사용할지)
+						// "자료형 변수명;" 형태로 이루어지는데 자료형은 메모리 크기를 결정 짓는 요소이다.
+		a=1111; 		// 변수 초기화(메모리 최초 값의 대입)
+		a=2222;
+		double b=3.14;  // 선언과 초기화가 동시에 이루어질 수 있음
+		boolean boo;
+		boo=true;
+		char ch;
+		ch='A';
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(boo);
+		System.out.println(ch);
+		
+	}
+
+	public static void func01() {
+		System.out.println("call...");
+	}
+
+}

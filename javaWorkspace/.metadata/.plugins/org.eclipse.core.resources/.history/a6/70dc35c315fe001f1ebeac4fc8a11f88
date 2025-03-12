@@ -1,0 +1,30 @@
+package com.am;
+
+/*
+ * 클래스 구성요소
+ * 
+ * 1. 메서드
+ * 2. 필드
+ * 3. 생성자
+ * 
+ * 
+ * 
+ */
+
+public class Ex01 {
+	public static final int b=2222; // 전역변수
+	
+	public static void main(String[] args) {
+		final int a; // 지역변수 - final: 상수형 변수를 만들 때 사용한다.
+		a=1111;
+		// a=2222; // 값의 변경을 불허
+		System.out.println("a="+a);
+	}
+
+	public static void func01() {
+		System.out.println(b);
+		// b++;
+		// a++;
+	}
+
+}

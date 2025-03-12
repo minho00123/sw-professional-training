@@ -1,0 +1,16 @@
+package com.am;
+
+public class Ex10 {
+//	public static int su=1111;
+	
+	public static void main(String[] args) {
+		int su1=1111;
+		System.out.println(su1);
+
+	}
+
+	public static void func01(int su1) {
+		su1++;
+		System.out.println("func01 su="+su1);
+	}
+}

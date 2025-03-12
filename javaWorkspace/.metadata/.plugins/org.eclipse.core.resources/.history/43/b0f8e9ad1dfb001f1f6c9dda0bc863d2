@@ -1,0 +1,31 @@
+package com.pm;
+
+public class Ex02 {
+	// 메서드(클래스메서드, static method)
+	public static void func01() {}
+
+	// 메서드(멤버 메서드,인스턴스 메서드, non-static method)
+	public void func02() {
+		System.out.println("멤버메서드");
+	}
+	
+	public void func02(int a) {
+		int su = func03();
+		System.out.println("su="+su); // non-static method끼리는 바로 호출 가능
+		return;
+	}
+	
+	public int func03() {
+		return 1234;
+	}
+
+	public static void main(String[] args) {
+		func01();
+		// 참조변수
+		Ex02 me = new Ex02(); // 객체 생성
+		me.func02();
+		me.func02(1111);
+		me.func03();
+	}
+
+}

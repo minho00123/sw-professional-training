@@ -1,0 +1,81 @@
+package com.pm;
+import java.util.Scanner;
+
+/*
+ * Q1.		Q2.		Q3.
+ * ★		   A	1234
+ * ★★		  BC	567
+ * ★★★		 DEF	89
+ * ★★★★		GHIJ	0
+ * 
+ * Q4.실행파일을 만드세요
+ * -----------------------------------
+ * msa영수증
+ * -----------------------------------
+ * 상품			단가	개수	금액
+ * -----------------------------------
+ * 지리산물		1000	1		1000
+ * 자갈치		1200	2		2400
+ * 사탕			500		3		1500
+ * -----------------------------------
+ * 합계							00000
+ * 
+ * Q5.
+ * -----------------------------------
+ * 가위 바위 보 게임(ver 0.1.0)
+ * -----------------------------------
+ * 가위(1),바위(2),보(3),종료(0)> 1
+ * 당신:가위		컴퓨터:바위
+ * 졌습니다
+ * 
+ * 가위(1),바위(2),보(3),종료(0)> 1
+ * 당신:가위		컴퓨터:보
+ * 이겼습니다
+ * 
+ * 가위(1),바위(2),보(3),종료(0)> 1
+ * 누적 승률
+ * 1승 0무 1패
+ * 이용해주셔서 감사합니다
+ */
+
+
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Q1.");
+		System.out.print("갯수를 입력하세요:");
+		int number = sc.nextInt();
+		
+		for (int i = 0; i < number; i++) {
+			for (int j = 0; j < i + 1; j++) {
+				System.out.print("★");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("----------------------------------------------------------");
+		System.out.println("Q2.");
+		
+		
+		System.out.println("   A");
+		System.out.println("  BC");
+		System.out.println(" DEF");
+		
+		for (int i = 0; i < number; i++) {
+			for (int j = number - 1; j > 0; j--) {
+				System.out.println(" ");
+			}
+			
+			for (int k = 65; k < 65 + i; k++) {
+				System.out.println((char) k);
+			}
+			
+			System.out.println();
+		}
+
+	}
+
+}

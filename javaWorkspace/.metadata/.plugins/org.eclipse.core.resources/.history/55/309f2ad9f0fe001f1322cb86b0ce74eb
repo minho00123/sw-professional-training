@@ -1,0 +1,13 @@
+package com.am;
+
+public class Ex05 {
+
+	public static void main(String[] aaaaaaaa) {
+		System.out.println(aaaaaaaa.length);
+		for(int i=0; i<aaaaaaaa.length; i++) {
+			System.out.println(aaaaaaaa[i]);
+		}
+
+	}
+
+}

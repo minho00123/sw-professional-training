@@ -1,0 +1,16 @@
+package com.pm;
+/*
+ * 메서드(클래스메서드, static method)
+ * 메서드(멤버 메서드,인스턴스 메서드, non-static method)
+ */
+
+public class Ex02 {
+
+	public void func01() {
+		System.out.println("멤버메서드");
+	}
+	public static void main(String[] args) {
+		
+	}
+
+}

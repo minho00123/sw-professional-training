@@ -1,0 +1,12 @@
+package com.am;
+// 이 문서상의 내용은 패키지 위에 있다.
+
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
