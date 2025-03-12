@@ -46,6 +46,7 @@ public class Ex06 {
 		arr7=new int[3][];
 		for(int i=0; i<arr4.length; i++) {
 			int[] temp=arr4[i];
+			
 			int[] temp2=new int[temp.length];
 			for(int j=0; j<temp.length; j++) {
 				temp2[j]=temp[j];

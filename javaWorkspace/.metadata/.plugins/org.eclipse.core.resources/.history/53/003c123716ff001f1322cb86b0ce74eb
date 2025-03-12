@@ -1,0 +1,13 @@
+package com.pm;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		String msg="java db web framework";
+		
+		msg.split(" ")
+		System.out.println();
+
+	}
+
+}

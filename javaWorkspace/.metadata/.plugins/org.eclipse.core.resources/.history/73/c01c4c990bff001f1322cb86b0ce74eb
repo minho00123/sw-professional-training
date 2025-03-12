@@ -1,0 +1,15 @@
+package com.pm;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		String msg1="Hello World";
+		
+		System.out.println(msg1.startsWith("He"));
+		System.out.println(msg1.endsWith("ld"));
+		System.out.println(msg1.startsWith("he"));
+		System.out.println(msg1.endsWith("l"));
+
+	}
+
+}

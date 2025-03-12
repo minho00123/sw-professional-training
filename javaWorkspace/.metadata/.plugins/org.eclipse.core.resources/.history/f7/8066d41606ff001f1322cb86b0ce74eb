@@ -1,0 +1,13 @@
+package com.pm;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		java.lang.String msg="hello world";
+		String msg1=new String();
+		String msg2=new String(new char[] {'a','b','c'});
+		String msg3=new String(new byte[] {65,66,67});
+		java.lang.System.out.println(msg3);
+	}
+
+}

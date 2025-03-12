@@ -1,0 +1,29 @@
+package com.pm;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		int age=0;
+		char gender='@';
+		System.out.println("주민번호 체크기(ver 0.2.0)");
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		boolean boo=true;
+		while(boo) {
+			System.out.print("주민번호> ");
+			String input=sc.nextLine();
+			String[] data=input.split("-");
+			if(data.length==2) {
+				if(data[0].length()==6&&data[1].length()==7) {
+					
+				}else {
+					System.out.println("포멧이 잘못됐습니다. 다시 입력하세요.");
+				}
+			}else {
+				System.out.println("포멧이 잘못됐습니다. 다시 입력하세요.");
+			}
+		}
+		System.out.println(age+"세 "+gender);
+	}
+
+}
