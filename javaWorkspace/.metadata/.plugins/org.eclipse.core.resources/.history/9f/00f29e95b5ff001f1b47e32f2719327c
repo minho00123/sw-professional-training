@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		Carriage car1=new Carriage();
+
+	}
+
+}

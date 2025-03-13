@@ -1,0 +1,14 @@
+package com.pm;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		Class ex03=Ex03.class;
+		
+		Class clz;
+		clz=Class.class;
+		
+
+	}
+
+}

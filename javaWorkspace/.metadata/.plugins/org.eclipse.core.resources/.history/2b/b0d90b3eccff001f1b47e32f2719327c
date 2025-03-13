@@ -1,0 +1,18 @@
+package com.pm;
+
+class Tv{
+	public void on() {
+		System.out.println("ÄÑ´Ù");
+	}
+	public void off() {
+		System.out.println("²ô´Ù");
+	}
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.am;
+
+class Ex100{
+	
+	public Ex100(String msg) {
+		
+	}
+	
+	public void func01() {
+		System.out.println("부모기능");
+	}
+}
+
+public class Ex10 extends Ex100 {
+	
+	public Ex10() {
+		super("aaa"); // 코드 맨 상단에 위치해야 한다.
+	}
+
+	public Ex10(int a) {
+		this();
+	}
+	public void func01() {
+		
+	}
+	public static void main(String[] args) {
+		Ex10 me=new Ex10();
+		me.func01();
+	}
+
+}

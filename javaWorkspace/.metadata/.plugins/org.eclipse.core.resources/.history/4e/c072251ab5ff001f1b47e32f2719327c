@@ -1,0 +1,41 @@
+package com.am;
+
+class Carriage {
+	int speed;
+	int max;
+	public Carriage() {
+		max=20;
+	}
+	public void speedUp() {}
+	public void speedDown() {}
+}
+
+class Cycle extends Carriage {
+	public Cycle() {
+		max=40;
+	}
+}
+
+class Car extends Carriage {
+	String model;
+	String color;
+	public Car(String color, String model) {
+		max=100;
+		this.color=color;
+		this.model=model;
+	}
+}
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		Car myCar=new Car("Èò»ö", "¸ð´×");
+		myCar.speedUp();
+		myCar.speedDown();
+		
+		Cycle myCycle=new Cycle();
+		myCycle.speedUp();
+		myCycle.speedDown();
+	}
+
+}

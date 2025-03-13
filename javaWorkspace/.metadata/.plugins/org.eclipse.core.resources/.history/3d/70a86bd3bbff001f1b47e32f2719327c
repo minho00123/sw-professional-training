@@ -1,0 +1,25 @@
+package com.am;
+
+class Ex100{
+	
+	public Ex100(String msg) {
+		
+	}
+	
+	public void func01() {
+		System.out.println("±â´É");
+	}
+}
+
+public class Ex10 extends Ex100 {
+	
+	public Ex10() {
+		super();
+	}
+
+	public static void main(String[] args) {
+		Ex10 me=new Ex10();
+		me.func01();
+	}
+
+}

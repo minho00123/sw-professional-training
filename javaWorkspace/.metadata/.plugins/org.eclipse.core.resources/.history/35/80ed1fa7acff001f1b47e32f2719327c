@@ -1,0 +1,6 @@
+package com.am;
+
+public class Ex05 {
+	public static int su5=5555;
+	public static void func5() {}
+}

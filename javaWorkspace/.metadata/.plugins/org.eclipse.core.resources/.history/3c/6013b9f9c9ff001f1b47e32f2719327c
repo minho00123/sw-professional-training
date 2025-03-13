@@ -1,0 +1,17 @@
+package com.pm;
+
+public class Ex03 {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		// 클래스의 정보를 갖는 객체
+		Class ex03=Ex03.class;
+		System.out.println(ex03);
+		Class clz;
+//		clz=Class.class;
+		clz=Class.forName("com.pm.Ex03");
+		System.out.println(clz);
+		
+		System.out.println(clz.newInstance());
+	}
+
+}

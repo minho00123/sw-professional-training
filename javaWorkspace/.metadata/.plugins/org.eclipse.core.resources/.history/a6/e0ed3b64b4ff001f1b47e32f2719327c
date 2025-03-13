@@ -1,0 +1,36 @@
+package com.am;
+
+class Carriage {
+	int speed;
+	final int max;
+	public Carriage() {
+		max=40;
+	}
+	public Carriage(int max) {
+		this.max=max;
+	}
+	public void speedUp() {}
+	public void speedDown() {}
+}
+
+class Car extends Carriage {
+	int speed;
+	final int max;
+	public Car() {
+		max=100;
+	}
+	public Car(int max) {
+		this.max=max;
+	}
+	public void speedUp() {}
+	public void speedDown() {}
+}
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

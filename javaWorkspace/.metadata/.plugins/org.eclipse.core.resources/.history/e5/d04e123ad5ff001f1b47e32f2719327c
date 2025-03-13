@@ -1,0 +1,80 @@
+package com.pm;
+
+/*
+ * 학생성적관리프로그램(ver 0.2.0) - 배열
+ * 학생성적관리프로그램(ver 0.3.0) - 문자열
+ * 
+ * 3과목(국어,영어,수학)
+ * 총원>3
+ * 1. 입력 2.출력 0.종료> 1
+ * 국어> 
+ * 영어> 
+ * 수학> 
+ * 1. 입력 2.출력 (3.수정 4.삭제) 0.종료> 2
+ * ------------------------------------------------------------
+ * 학번 |국어	|영어	|수학	|합계	|평균
+ * ------------------------------------------------------------
+ * 1	|90		|91		|92		|000	|000
+ * 
+ * 1. 입력 2.출력 0.종료> 1
+ * 국어> 
+ * 영어> 
+ * 수학> 
+ * 1. 입력 2.출력 0.종료> 2
+ * ------------------------------------------------------------
+ * 학번 |국어	|영어	|수학	|합계	|평균
+ * ------------------------------------------------------------
+ * 1	|90		|91		|92		|000	|000
+ * 2	|90		|91		|92		|000	|000
+ * 
+ */
+
+public class Ex05 {
+
+	public static void version2() {
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		System.out.println("학생성적관리프로그램(ver 0.2.0)");
+		System.out.print("총원> ");
+		int total = sc.nextInt();
+		int[][] gradeData = new int[total][3];
+		int count = 0;
+
+		while(true) {
+			System.out.print("1. 입력 2.출력 0.종료> ");
+			int input = sc.nextInt();
+			
+			int sum = 0;
+			double average = 0;
+			
+			switch (input) {
+				case 1:
+					if (count == total) {
+						System.out.println("입력할 공간이 없습니다.");
+						break;
+					}
+					
+					System.out.print("국어> ");
+					int korean = sc.nextInt();
+					System.out.print("영어> ")
+					int english = sc.nextInt();
+					System.out.print("수학> ");
+					int math = sc.nextInt();
+					
+					count++;
+					break;
+				case 2:
+					break;
+				case 0:
+					System.out.println("프로그램을 종료합니다.");
+					return;
+				default:
+					System.out.println("올바른 숫자를 입력하세요.");
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		version2();
+	}
+
+}
