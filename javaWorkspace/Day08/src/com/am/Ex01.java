@@ -37,7 +37,7 @@ public class Ex01 {
 		// 1. public - 어디서든 접근 허용
 		// 2. default - 동일 패키지 내에서만 접근 허용 (하위 디렉토리도 안됨)
 		// 3. private - 선언된 클래스 내부에서만 접근 허용 (객체 생성 불허)
-		// public > default > private
+		// public > protected >= default > private
 		com.am.Ex01.func01();
 		com.am.Ex01.func02();
 		com.am.Ex01.func03();

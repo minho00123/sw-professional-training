@@ -1,0 +1,12 @@
+package com.pm;
+
+public class Ex01 {
+	static com.am.Ex07 ex07;
+	
+	public static void main(String[] args) {
+		System.out.println();
+		String msg=Ex01.ex07.toString();
+
+	}
+
+}

@@ -1,0 +1,97 @@
+package com.pm;
+import java.util.Scanner;
+
+public class StudentGradeManagementProgramVer5 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int count = 0;
+		int[][] gradeData = new int[count][4];
+		
+		System.out.println("--------------------------------------------------");
+		System.out.println("\t학생성적관리프로그램(ver 0.5.0)");
+		System.out.println("--------------------------------------------------");
+		
+		
+		
+		while (true) {
+			System.out.print("1.보기 2.입력 3.수정 4.삭제 0.종료> ");
+			int choice = sc.nextInt();
+			
+			switch (choice) {
+				case 1:
+					if (count == 0) {
+						System.out.println("출력할 성적이 없습니다.");
+						break;
+					}
+					
+					System.out.println("--------------------------------------------------");
+					System.out.println("학번\t|국어\t|영어\t|수학\t|합계\t|평균");
+					System.out.println("--------------------------------------------------");
+
+					for (int i = 0; i < count; i++) {
+						int sum = gradeData[i][1] + gradeData[i][2] + gradeData[i][3];
+						double average = sum / 3;
+						
+						System.out.println(String.format("%d\\t|%d\\t|%d\\t|%d\\t|%d\\t|%.2f\\t%n", gradeData[i][0], gradeData[i][1], gradeData[i][2], gradeData[i][3], sum, average));
+					}
+
+					break;
+				case 2:
+					count++;
+					boolean isOkay = false;
+					int[][] temp = new int[count][4];
+
+					System.out.print("학번> ");
+					temp[count - 1][0] = sc.nextInt();
+
+					while (true) {
+						System.out.print("국어> ");
+						int koreanGrade = sc.nextInt();
+
+						if (koreanGrade < 0 || koreanGrade > 100) {
+							System.out.println("0 ~ 100 사이의 숫자를 입력하세요.");
+						} else {
+							temp[count - 1][1] = koreanGrade;
+							break;
+						}
+					}
+
+					while (true) {
+						System.out.print("영어> ");
+						int englishGrade = sc.nextInt();
+						if (englishGrade < 0 || englishGrade > 100) {
+							System.out.println("0 ~ 100 사이의 숫자를 입력하세요.");
+						} else {
+							temp[count - 1][2] = englishGrade;
+							break;
+						}
+					}
+
+					while (true) {
+						System.out.print("수학> ");
+						int mathGrade = sc.nextInt();
+						if (mathGrade < 0 || mathGrade > 100) {
+							System.out.println("0 ~ 100 사이의 숫자를 입력하세요.");
+						} else {
+							temp[count - 1][3] = mathGrade;
+							break;
+						}
+					}
+
+					break;
+				case 3:
+					break;
+				case 4:
+					break;
+				case 0:
+					System.out.println("프로그램을 종료합니다.");
+					return;
+				default:
+					System.out.println("올바른 번호를 입력하세요.");
+			}
+		}
+	}
+
+}

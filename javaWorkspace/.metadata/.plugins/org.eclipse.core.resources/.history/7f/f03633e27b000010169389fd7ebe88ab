@@ -1,0 +1,38 @@
+package com.am;
+
+// 인터페이스
+// 오직 추상메서드만을 갖는 ...
+// 다음의 키워드 생략이 가능 (public, abstract, static)
+// 필드, 생성자 (X)
+
+interface Inter01{
+	public static int su1=1111;
+	public int su2=2222; // static 키워드 생략가능
+	int su3=3333; // public 키워드 생략가능
+
+	public abstract void func01();
+//	public void func02() {}; // 메서드의 구현을 가질 수 없다.
+	public void func02(); // abstract 키워드 생략가능
+	void func03(); // public 키워드 생략가능
+}
+interface Inter02{
+	void func01();
+}
+interface Inter03{
+	void func02();
+}
+
+public class Ex04 implements Inter02,Inter03{
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	@Override
+	public void func01() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

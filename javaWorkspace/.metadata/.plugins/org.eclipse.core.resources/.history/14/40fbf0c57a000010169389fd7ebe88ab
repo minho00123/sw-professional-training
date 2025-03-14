@@ -1,0 +1,15 @@
+package com.am;
+
+interface Inter01{
+	public abstract void func01();
+	public void func02() {};
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

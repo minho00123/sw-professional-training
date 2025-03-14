@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.pm.Student.koreanGrade&apos; in &apos;com.pm.Student&apos;&#x0D;&#x0A;- Original project: &apos;Day09&apos;&#x0D;&#x0A;- Original element: &apos;com.pm.Student.koreanGrade&apos;&#x0D;&#x0A;- Getter method name: &apos;getKoreanGrade&apos;&#x0D;&#x0A;- Setter method name: &apos;setKoreanGrade&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;koreanGrade&apos;" flags="589830" getter="getKoreanGrade" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;com.pm{StudentGradeManagementProgramVer7.java[Student^koreanGrade" insertion="-1" setter="setKoreanGrade" stamp="1741937519775" version="1.0" visibility="1"/>
+</session>

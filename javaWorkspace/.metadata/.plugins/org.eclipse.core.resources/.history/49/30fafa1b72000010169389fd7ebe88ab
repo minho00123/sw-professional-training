@@ -1,0 +1,34 @@
+package com.am;
+
+// 추상클래스
+// - 추상메서드를 0개 이상 갖는 클래스
+// - 상속을 통해서만 사용함을 강제하는 클래스
+abstract class Lec01{
+	static int su1=1111;
+	int su2=2222;
+	
+	public Lec01() {
+		System.out.println("생성자 호출");
+	}
+	
+	public static void func03() {}
+	public void func01() {}
+	// 추상메서드
+	// 메서드의 선언 O
+	// 메서드의 구현 X
+//	public abstract void func02();
+//	public abstract void func03();
+//	public abstract void func04();
+}
+
+public class Ex01{
+
+//	public void func02() {}
+	
+	public static void main(String[] args) {
+//		Lec01 parent=new Lec01();
+		System.out.println(Lec01.su1);
+		Lec01.func03();
+	}
+
+}

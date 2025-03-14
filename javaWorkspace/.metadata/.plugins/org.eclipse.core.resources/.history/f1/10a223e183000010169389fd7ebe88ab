@@ -1,0 +1,16 @@
+package com.am;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		Object obj=new Object();
+//		obj.clone();
+		Object obj2=new Object();
+		Object obj3=obj;
+		System.out.println(obj.equals(obj2));
+		System.out.println(obj.equals(obj3));
+		
+		Class clz=obj.getClass();
+	}
+
+}

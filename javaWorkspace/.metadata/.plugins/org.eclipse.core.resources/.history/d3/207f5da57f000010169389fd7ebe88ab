@@ -1,0 +1,11 @@
+package com.am;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		int[] arr1= {2,4,6,8};
+		Object copy=arr1.clone();
+
+	}
+
+}
