@@ -1,0 +1,13 @@
+package com.am;
+
+public class Ex11 {
+
+	public static void main(String[] args) {
+		char target='A';
+		
+		System.out.println(Character.isDefined(target));
+		System.out.println(Character.isLetter(target));
+
+	}
+
+}

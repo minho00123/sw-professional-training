@@ -1,0 +1,15 @@
+package com.am;
+
+public class Ex11 {
+
+	public static void main(String[] args) {
+		char target='A';
+		// ¹®ÀÚ³Ä
+		// 1.0.2
+		System.out.println(Character.isDefined(target));
+		// 1.5
+		System.out.println(Character.isLetter(target));
+		System.out.println(Character.isAlphabetic(target));
+	}
+
+}

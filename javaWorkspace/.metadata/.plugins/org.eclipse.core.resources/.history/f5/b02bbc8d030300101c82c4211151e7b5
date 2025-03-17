@@ -1,0 +1,47 @@
+package com.pm;
+// 주민번호체크
+// 학생성적
+class Student {
+	int kor;
+	int eng;
+	int math;
+	public void setKor(String kor) {
+		this.kor=Integer.parseInt(kor);
+	}
+	public void setEng(String eng) {
+		this.eng=Integer.parseInt(eng);
+	}
+	public void setMath(String math) {
+		this.math=Integer.parseInt(math);
+	}
+	public int tot() {
+		return kor+eng+math;
+	}
+	public double avg() {
+		return tot()*100/3/100.0;
+	}
+}
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		System.out.println("학생성적관리프로그램(ver 0.8.0)");
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		String input=null;
+		while(true) {
+			System.out.print("1.보기 2.입력 0.종료> ");
+			input=sc.nextLine();
+			if(input.equals("0"))break;
+			if(input.equals("1")) {
+				
+			}
+			if(input.equals("2")) {
+				Student stu=new Student();
+				System.out.print("국어> ");
+			}
+		}
+
+	}
+
+}

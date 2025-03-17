@@ -1,0 +1,31 @@
+package com.am;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// return break continue
+		System.out.println("시작");
+		func01();
+		System.out.println("종료");
+
+	}
+	public static void func01() {
+		for(int i=0; i<10; i++) {
+			if(i>5)break;
+			System.out.println("i="+i);
+		}
+	}
+	public static void func02() {
+		for(int i=0; i<10; i++) {
+			if(i>5)return; // 메모리 기준으로 호출한 쪽으로 돌아가는 것
+			System.out.println("i="+i);
+		}
+	}
+	public static void func03() {
+		for(int i=0; i<10; i++) {
+			if(i>5)continue;
+			System.out.println("i="+i);
+		}
+	}
+
+}

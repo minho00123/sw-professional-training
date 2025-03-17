@@ -1,0 +1,69 @@
+package com.am;
+
+import java.util.Scanner;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// 주민번호 체크기(ver 0.9.0)
+		// 주민번호> 000000-0000000
+		// 당신은 00세 0성입니다.
+		
+		System.out.println("주민번호 체크기(ver 0.9.0)");
+		Scanner sc = new Scanner(System.in);
+	
+		while (true) {
+			System.out.print("주민번호> ");
+			String input = sc.nextLine();
+			String[] splittedInput = input.split("-");
+			
+			if (input.length() != 14) {
+				System.out.println("올바른 번호를 입력하세요. Ex. 000000-0000000");
+			} else if (splittedInput[0].length() != 6) {
+				System.out.println("올바른 번호를 입력하세요. Ex. 000000-0000000");
+			} else if (splittedInput[1].length() != 7) {
+				System.out.println("올바른 번호를 입력하세요. Ex. 000000-0000000");
+			} else {
+				char gender = '남';
+				char genderNumber = splittedInput[1].charAt(0);
+				
+				if (genderNumber == '2' || genderNumber == '4') {
+					gender = '여';
+				}
+				
+				int year = Integer.valueOf(splittedInput[0].substring(0, 2));
+				int age = genderNumber == '3' || genderNumber == '4' ? 2025 - (2000 + year) + 1 : 2025 - (1900 + year) + 1;
+				
+				System.out.println("당신은 " + age + "세 " + gender + "성입니다.");
+				
+				return;
+			}
+			
+		}
+		
+		
+		// -----------------------------------------------------------------------------------------------------------------------------
+		// 강사님 코드
+		
+		int age2=0;
+		char[] gender= {'남','여'};
+		int genderIdx=0;
+		System.out.println("주민번호 체크기(ver 0.9.0)");
+		String input=null;
+		while(true) {
+			System.out.print("주민번호>");
+			input=sc.nextLine();
+			String[] arr=input.trim().split("-");
+			if(arr.length!=1)continue;
+			if(arr[0].length()!=6)continue;
+			if(arr[1].length()!=7)continue;
+			boolean[] arr2= {false, false};
+			if(arr2[0]||arr2[1])continue;
+			
+			break;
+		}
+		System.out.println("당신은 "+age2+"세 "+gender[genderIdx]+"성입니다");
+
+	}
+
+}

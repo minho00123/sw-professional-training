@@ -234,7 +234,7 @@ public class StudentGradeManagementProgramVer7 {
 					break;
 				case 0:
 					System.out.println("프로그램을 종료합니다.");
-					return;S
+					return;
 				default:
 					System.out.println("올바른 번호를 입력하세요.");
 			}

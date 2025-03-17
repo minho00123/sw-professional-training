@@ -1,0 +1,44 @@
+package com.am;
+
+import java.util.Scanner;
+
+public class Ex01 {
+
+	public static void main(String[] argsJ) {
+		// 학생성적관리프로그램(ver 0.7.0)
+		// 1. 보기 2. 입력 [3. 수정 4. 삭제] 0. 종료>
+		// 무결성 (0~100)
+		// 동적할당
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("학생성적관리프로그램(ver 0.7.0)");
+		
+		while (true) {
+			System.out.print("1. 보기 2. 입력 [3. 수정 4. 삭제] 0. 종료> ");
+			int input = sc.nextInt();
+			if (input == 0) {
+				System.out.println("프로그램을 종료합니다. 이용해주셔서 감사합니다.");
+				return;
+			}
+
+			if (input == 1) {
+				System.out.println("------------------------------------------------");
+				System.out.println("학번\t|국어\t|영어\t|수학\t|합계\t|평균\t");
+				System.out.println("------------------------------------------------");
+			}
+			
+			if (input == 2) {
+				System.out.print("국어> ");
+				int koreanScore = sc.nextInt();
+				
+				System.out.print("영어> ");
+				int englishScore = sc.nextInt();
+				
+				System.out.print("수학> ");
+				int mathScore = sc.nextInt();
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,21 @@
+package com.pm;
+
+public class Ex14 {
+
+	public static void main(String[] args) {
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		System.out.println("학생성적관리프로그램(ver 0.7.0");
+		int input=0;
+		int[] data=new int[]  {};
+		while(true) {
+			System.out.print("1.보기 2.입력 0.종료> ");
+			input=sc.nextInt();
+			if(input==0)break;
+			if(input==1) {}
+			if(input==2) {}
+		}
+
+	}
+
+}

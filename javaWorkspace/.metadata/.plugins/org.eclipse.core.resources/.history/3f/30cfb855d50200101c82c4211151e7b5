@@ -1,0 +1,12 @@
+package com.am;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		int a=1111;
+		Integer b=2222;
+		Integer c=new Integer();
+
+	}
+
+}

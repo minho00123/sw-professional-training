@@ -1,0 +1,32 @@
+package com.am;
+
+import java.util.Scanner;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// 주민번호 체크기(ver 0.9.0)
+		// 주민번호> 000000-0000000
+		// 당신은 00세 0성입니다.
+		
+		System.out.println("주민번호 체크기(ver 0.9.0)");
+		Scanner sc = new Scanner(System.in);
+		
+		String input = sc.nextLine();
+		String[] splittedInput = input.split("-");
+		
+		if (splittedInput[0].length() != 6) {
+			System.out.println("올바른 번호를 입력하세요. Ex. 000000-0000000");
+		}
+		
+		if (splittedInput[1].length() != 7) {
+			System.out.println("올바른 번호를 입력하세요. Ex. 000000-0000000");
+		}
+		
+		char gender = '남';
+		char genderNumber = splittedInput[1].charAt(0);
+		if (splittedInput[1].charAt(0) == 1 || )
+
+	}
+
+}

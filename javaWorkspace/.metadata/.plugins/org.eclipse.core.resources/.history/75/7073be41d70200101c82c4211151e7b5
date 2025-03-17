@@ -1,0 +1,11 @@
+package com.am;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		Integer target=new Integer(10);
+		System.out.println(target.byteValue());
+
+	}
+
+}

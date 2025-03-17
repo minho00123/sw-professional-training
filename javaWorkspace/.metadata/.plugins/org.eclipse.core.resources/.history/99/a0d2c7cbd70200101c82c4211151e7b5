@@ -1,0 +1,20 @@
+package com.am;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		Integer target=new Integer(129);
+		Integer target2=new Integer(129);
+		System.out.println(target.byteValue()); // 1 byte = 0~255 -> -128~127
+		System.out.println(target.shortValue());
+		System.out.println(target.intValue());
+		System.out.println(target.longValue());
+		System.out.println(target.floatValue());
+		System.out.println(target.doubleValue());
+		System.out.println(target==target2);
+		System.out.println(target.intValue()==target2.intValue());
+		System.out.println(target.equals(target2));
+
+	}
+
+}

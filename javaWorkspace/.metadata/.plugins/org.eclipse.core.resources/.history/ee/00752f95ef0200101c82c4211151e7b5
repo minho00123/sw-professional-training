@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// 주민번호 체크기(ver 0.9.0)
+
+	}
+
+}

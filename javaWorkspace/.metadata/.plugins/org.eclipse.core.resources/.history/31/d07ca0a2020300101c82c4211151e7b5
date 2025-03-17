@@ -1,0 +1,16 @@
+package com.pm;
+// 林刮锅龋眉农
+// 切积己利
+public class Ex17 {
+
+	public static void main(String[] args) {
+		System.out.println("切积己利包府橇肺弊伐(ver 0.8.0)");
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		while(true) {
+			
+		}
+
+	}
+
+}

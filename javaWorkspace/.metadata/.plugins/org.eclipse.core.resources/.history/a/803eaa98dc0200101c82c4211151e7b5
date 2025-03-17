@@ -1,0 +1,12 @@
+package com.am;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		byte su1=127;
+		Byte su2=127;
+		Byte su3=new Byte(127);
+
+	}
+
+}
