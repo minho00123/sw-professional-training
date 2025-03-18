@@ -1,0 +1,16 @@
+package com.pm;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// 로또 번호 생성기(ver 0.1.0)
+		
+		System.out.println("로또 번호 생성기(ver 0.1.0)");
+		
+		int[] winningNumber = new int[6];
+		int number = (int) (Math.random() * 45) + 1;
+		
+
+	}
+
+}

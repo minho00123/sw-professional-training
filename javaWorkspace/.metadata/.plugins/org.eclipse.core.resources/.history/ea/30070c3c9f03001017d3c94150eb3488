@@ -1,0 +1,21 @@
+package com.am;
+
+class Outter04{
+	static void func01() {
+		class Local01{
+			final static int su01=1111;
+			int su02=2222;
+		}
+	}
+	void func02() {
+		class Local02{}// 위와 동일
+	}
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

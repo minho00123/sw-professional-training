@@ -1,0 +1,65 @@
+package com.am;
+
+class Outter04{
+	static int su3=3000;
+	int su4=4000;
+	public final static int su01=1000;
+	public int su02=2000;
+	static void func03() {}
+	void func04() {}
+	
+	// local class : ~jdk1.7 반드시 final, jdk1.8~ final 생략가능
+	static void func01(final int su05) {
+//		int su05=5555;
+//		su05++; // 에러!
+		class Local01{ // 접근제한자 불가능
+			public final static int su01=1111; // 그냥 static은 불가능
+			public int su02=2222;
+			public void func01() {
+				System.out.println(Outter04.su01);
+				System.out.println(this.su02);
+				System.out.println(Local01.su01);
+				System.out.println(new Outter04().su02);
+				func02();
+				func03();
+				Outter04 outt=new Outter04();
+				outt.func04();
+				System.out.println(su05);
+			}
+			public void func02() {}
+		}
+		System.out.println(su05);
+		Local01 loc=new Local01();
+		System.out.println(Local01.su01);
+		System.out.println(loc.su02);
+		loc.func01();
+		System.out.println(su05);
+	}
+//	new Local01(); 불가능
+	void func02() {
+		class Local02{
+			public final static int su01=1111; // 그냥 static은 불가능
+			public int su02=2222;
+			public void func01() {
+				System.out.println(su01);
+				System.out.println(su02);
+				func02();
+				func03();
+				func04();
+			}
+			public void func02() {}
+		
+		}// 위와 동일
+		new Local02().func01();
+	}
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		Outter04.func01(1111);
+		new Outter04
+//		Outter04.func01(5555);
+	}
+
+}

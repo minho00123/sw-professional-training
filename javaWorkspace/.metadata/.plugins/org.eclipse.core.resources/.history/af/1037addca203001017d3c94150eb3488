@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		// 익명클래스
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.pm;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// 예외처리
+		// try{실행코드}catch(~){예외발생시;}
+		
+	}
+
+}

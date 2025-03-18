@@ -1,0 +1,17 @@
+package com.pm;
+
+public class Ex05 {
+
+	public static int func01(int su) {
+		return 10/su;
+	}
+	
+	public static void main(String[] args) {
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		int input=sc.nextInt();
+		int su=func01(input);
+		System.out.println(su);
+	}
+
+}

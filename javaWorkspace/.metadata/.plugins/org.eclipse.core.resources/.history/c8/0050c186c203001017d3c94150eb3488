@@ -1,0 +1,15 @@
+package com.pm;
+
+public class Ex05 {
+
+	public static void func01() {
+	}
+	
+	public static void main(String[] args) {
+		java.util.Scanner sc;
+		sc=new java.util.Scanner(System.in);
+		int input=sc.nextInt();
+
+	}
+
+}
