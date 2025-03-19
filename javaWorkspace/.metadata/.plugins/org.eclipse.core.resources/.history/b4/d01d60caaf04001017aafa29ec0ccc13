@@ -1,0 +1,18 @@
+package com.pm;
+
+public interface Remocon {
+	void powerOn();
+}
+
+public class Test implements Remocon {
+
+	@Override
+	public void powerOn() {
+		System.out.println("HI");
+	}
+	
+	public static void main(String[] args) {
+		Remocon r = new Test();
+		r.powerOn();
+	}
+}

@@ -1,0 +1,25 @@
+package com.pm;
+
+import java.util.LinkedList;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+
+		// 선입선출 FIFO (first-in-firt-out)
+		java.util.Queue que = new LinkedList();
+		que.offer("첫번째");
+		que.offer("두번째");
+		que.offer("세번째");
+		que.offer("네번째");
+		que.offer("다섯번째");
+		
+		System.out.println(que.poll());
+		System.out.println(que.poll());
+		System.out.println(que.poll());
+		System.out.println(que.poll());
+		System.out.println(que.poll());
+		System.out.println(que.poll());
+	}
+
+}

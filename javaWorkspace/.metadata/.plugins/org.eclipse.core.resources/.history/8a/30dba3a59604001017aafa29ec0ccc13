@@ -1,0 +1,11 @@
+package com.pm;
+
+import java.util.HashSet;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		java.util.Set set1 = new HashSet();
+	}
+
+}

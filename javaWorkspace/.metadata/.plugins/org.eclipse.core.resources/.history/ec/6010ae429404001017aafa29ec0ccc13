@@ -1,0 +1,28 @@
+package com.pm;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+//		Deque que1 = new LinkedList();
+//		que1.offerFirst("첫번째");
+//		que1.offerFirst("두번째");
+//		que1.offerFirst("세번째");
+//
+//		while (que1.peekLast() != null) {
+//			System.out.println(que1.pollLast());
+//		}
+		
+		Deque que2 = new LinkedList();
+		que2.offerLast("첫번째");
+		que2.offerLast("두번째");
+		que2.offerLast("세번째");
+
+		while (que2.peekFirst() != null) {
+			System.out.println(que2.pollLast());
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.pm;
+
+public class StudentGradeManagementProgramVer8 {
+
+	public static void main(String[] args) {
+		System.out.println("--------------------------------------------------");
+		System.out.println("\t切积己利包府橇肺弊伐(ver 0.8.0)");
+		System.out.println("--------------------------------------------------");
+
+	}
+
+}

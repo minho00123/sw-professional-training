@@ -1,0 +1,19 @@
+package com.pm;
+
+interface A {
+	
+}
+
+interface B{}
+interface C{}
+interface D{}
+interface E{}
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

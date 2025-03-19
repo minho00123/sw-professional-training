@@ -1,0 +1,17 @@
+package com.pm;
+
+import java.util.Vector;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// Vector
+		Vector list = new Vector();
+		list.add("첫번째");
+		list.add("두번째");
+		list.add("세번째");
+		list.add("네번째");
+		list.add("다섯번째");
+	}
+
+}

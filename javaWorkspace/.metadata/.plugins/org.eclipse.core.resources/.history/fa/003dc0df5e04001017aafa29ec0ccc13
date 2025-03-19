@@ -1,0 +1,21 @@
+package com.am;
+
+class Ball{
+	static int cnt=1;
+	final int num;
+	boolean check;
+	
+	public Ball() {
+		num=cnt++;
+		check=false;
+	}
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

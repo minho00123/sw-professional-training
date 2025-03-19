@@ -1,0 +1,26 @@
+package com.pm;
+
+import java.util.ArrayList;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ArrayList arr = new ArrayList();
+		
+		
+		for (int i = 0; i < 5; i++) {
+			int[] intArr = new int[] {1, 2, 3, 4, 5};
+			arr.add(intArr);
+		}
+		
+		for (int i = 0; i < 5; i++) {
+			int[] temp = (int []) arr.get(i);
+			System.out.println(temp[0]);
+		}
+				
+		
+		
+
+	}
+
+}

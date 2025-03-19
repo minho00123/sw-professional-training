@@ -1,0 +1,13 @@
+package com.pm;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		// 로또 (자료구조 사용)
+		Set set1 = new HashSet();
+	}
+
+}

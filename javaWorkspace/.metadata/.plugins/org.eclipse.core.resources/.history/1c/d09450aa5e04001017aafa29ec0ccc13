@@ -1,0 +1,19 @@
+package com.am;
+
+class Ball{
+	final int num;
+	static int cnt;
+	
+	public Ball() {
+		num=0;
+	}
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

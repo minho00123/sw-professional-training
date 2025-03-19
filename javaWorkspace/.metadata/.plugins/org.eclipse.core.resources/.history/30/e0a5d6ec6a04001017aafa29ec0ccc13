@@ -1,0 +1,23 @@
+package com.am;
+
+class MyArray {
+	int[] arr=new int[0];
+	
+	void add(int su) {
+		arr=new int[arr.length+1];
+		arr[1]=su;
+	}
+//	void remove() {}
+//	void get() {}
+//	void size() {}
+//	void edit() {}
+}
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.pm;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		java.util.ArrayList list = new java.util.ArrayList();
+		java.util.LinkedList list = new java.util.LinkedList();
+		long before = System.currentTimeMillis();
+		for (int i = 0; i < 1000000; i++) {
+			list.add("item"+i);
+		}
+		long after = System.currentTimeMillis();
+		for(int i=0; i<10000; i++) {
+			Object msg=list.get(i);
+		}
+		System.out.println("걸린시간:" + (after - before) + "ms");
+		System.out.println("걸린시간:" + (after - before)/1000.0 + "s");
+	}
+
+}

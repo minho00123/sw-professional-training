@@ -1,0 +1,29 @@
+package com.am;
+
+class Node {
+	int val;
+	Node nxt;
+}
+
+class MyLink {
+	Node first,
+	
+	void add(int su) {
+//		1.
+		first=new Node();
+//		temp.val=su;
+		
+//		2.
+		Node temp2=new Node();
+		temp2.val=su;
+		first.nxt=temp2;
+	}
+}
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

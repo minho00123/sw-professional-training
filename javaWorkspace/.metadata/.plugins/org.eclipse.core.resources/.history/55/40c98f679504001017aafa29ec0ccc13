@@ -1,0 +1,19 @@
+package com.pm;
+
+import java.util.Stack;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		Stack stack = null;
+		stack.push("첫번째");
+		stack.push("두번째");
+		stack.push("세번째");
+		stack.push("네번째");
+
+		while (stack.peek() != null) {
+			System.out.println(stack.pop());
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.pm;
+
+interface A {
+	
+}
+
+class B implements A {
+}
+
+class C implements A {
+}
+
+class D extends B {
+}
+
+class E extends C {
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+
+	}
+
+}

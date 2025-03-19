@@ -1,0 +1,12 @@
+package com.pm;
+
+import java.util.Vector;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// Vector
+		Vector list = new Vector();
+	}
+
+}
