@@ -1,0 +1,14 @@
+package com.am;
+
+public class Food {
+
+	public static void main(String[] args) {
+		String[] types = {"한식", "중식", "양식", "일식", "태국식", "베트남식", "멕시코식", "터키식"};
+		
+		int randomNumber = (int) (Math.random() * types.length);
+		
+		System.out.println(types[randomNumber]);
+
+	}
+
+}

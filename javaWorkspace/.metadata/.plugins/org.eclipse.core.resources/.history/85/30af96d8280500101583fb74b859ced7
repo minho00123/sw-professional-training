@@ -1,0 +1,26 @@
+package com.am;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Set set1 = null;
+//		set1 = new HashSet();
+		set1 = new TreeSet();
+		set1.add(11111);
+		set1.add(22222);
+		set1.add(33333);
+		set1.add(33333);
+		set1.add(44444);
+
+		Iterator ite = set1.iterator();
+		while (ite.hasNext()) {
+			System.out.println(ite.next());
+		}
+
+	}
+
+}

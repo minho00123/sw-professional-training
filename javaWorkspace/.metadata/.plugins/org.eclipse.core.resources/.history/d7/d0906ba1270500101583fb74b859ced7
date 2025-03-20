@@ -1,0 +1,12 @@
+package com.am;
+
+import java.util.*;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		List list = new ArrayList();
+		list = new LinkedList();
+	}
+
+}

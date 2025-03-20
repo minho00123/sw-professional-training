@@ -1,9 +1,0 @@
-package com.am;
-
-public class Ex06 {
-	public int su6=6666;
-	
-	private Ex06() {}
-	
-	public void func6() {}
-}

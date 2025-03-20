@@ -1,0 +1,18 @@
+package com.pm;
+
+class Lec03 {
+	public static T func01(T obj) {
+		return obj;
+	}
+}
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		String msg = "static";
+
+		String msg2 = Lec03.func01(msg);
+		System.out.println(msg2);
+	}
+
+}

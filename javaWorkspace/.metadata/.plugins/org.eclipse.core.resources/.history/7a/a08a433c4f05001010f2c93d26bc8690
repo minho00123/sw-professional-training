@@ -1,0 +1,15 @@
+package com.pm;
+
+class Lec03 {
+	public static Object func01(Object obj) {
+		return obj;
+	}
+}
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

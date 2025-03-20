@@ -1,0 +1,45 @@
+package com.pm;
+
+class Ballpen {
+
+	public void work() {
+		System.out.println("글을 작성합니다");
+	}
+}
+
+class Pencil {
+	public void work() {
+		System.out.println("그림도 그립니다");
+	}
+}
+
+class Box {
+	private Object pen;
+
+	public void setPen(Object pen) {
+		this.pen = pen;
+	}
+
+	public Object getPen() {
+		return this.pen;
+	}
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Pencil pen2 = new Pencil();
+		Ballpen pen = new Ballpen();
+		Box box = new Box();
+
+		box.setPen(pen);
+		Ballpen my = (Ballpen) box.getPen();
+
+		box.setPen(pen2);
+		Pencil my2 = (Pencil) box.getPen();
+		
+		my.work();
+		my2.work();
+	}
+
+}

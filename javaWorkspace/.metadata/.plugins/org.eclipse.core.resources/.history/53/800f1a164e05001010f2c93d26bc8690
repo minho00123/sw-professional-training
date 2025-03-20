@@ -1,0 +1,28 @@
+package com.pm;
+
+class Lec01 {
+	public void func1() {
+		System.out.println("f1실행");
+	}
+}
+
+class Lec02 {
+	public void func2() {
+		System.out.println("f2실행");
+	}
+}
+
+class Box2 {
+	Object obj1;
+	Object obj2;
+	
+	
+}
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

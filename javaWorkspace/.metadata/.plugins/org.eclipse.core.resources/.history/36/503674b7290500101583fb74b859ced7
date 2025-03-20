@@ -1,0 +1,10 @@
+package com.am;
+
+public class Food {
+
+	public static void main(String[] args) {
+		int randomNumber = (int) (Math.random() * ) + 1; 
+
+	}
+
+}

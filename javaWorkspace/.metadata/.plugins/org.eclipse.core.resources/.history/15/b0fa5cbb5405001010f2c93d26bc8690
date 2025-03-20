@@ -1,0 +1,17 @@
+package com.pm;
+
+class Lec05<T> {
+
+	public T pass(T t) {
+		return t;
+	}
+}
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Lec05 you = new Lec05();
+		you.pass("");
+	}
+
+}

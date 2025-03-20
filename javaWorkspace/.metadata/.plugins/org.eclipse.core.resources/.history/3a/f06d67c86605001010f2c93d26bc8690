@@ -1,0 +1,30 @@
+package com.pm;
+
+import java.util.*;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// 학생성적관리프로그램(ver 0.11.0)
+		// SET
+		// 내림차순 학번
+		// 중복불허 - 학번 - 존재하는 학생입니다
+		// 강사님 코드
+		
+		System.out.println("학생성적관리프로그램(ver 0.11.0)");
+		Scanner sc = new Scanner(System.in);
+		int input = -1;
+		Set data = new HashSet();
+		
+		while (true) {
+			System.out.println("1.보기 2.입력 0.종료> ");
+			input = sc.nextInt();
+			
+			if (input == 0) break;
+			if (input == 1) {}
+			if (input == 2) {}
+		}
+
+	}
+
+}

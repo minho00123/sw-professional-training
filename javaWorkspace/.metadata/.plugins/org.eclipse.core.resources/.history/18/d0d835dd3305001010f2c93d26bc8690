@@ -1,0 +1,25 @@
+package com.am;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// (유저가 정의한) 순서가 있고 중복 허용
+		// 							key, value
+		Map map1 = new HashMap();
+		
+		map1.put("키1", "값1");
+		map1.put("키2", "값2");
+		map1.put("키3", "값3");
+		map1.put("키4", "값4");
+		map1.put("키3", "값5");
+		
+		System.out.println(map1.get("키1"));
+		System.out.println(map1.get("키2"));
+		System.out.println(map1.get("키3"));
+		System.out.println(map1.get("키4"));
+		System.out.println(map1.get("키5"));
+	}
+}

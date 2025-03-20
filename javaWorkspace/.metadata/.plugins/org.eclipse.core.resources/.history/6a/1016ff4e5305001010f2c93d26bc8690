@@ -1,0 +1,23 @@
+package com.pm;
+
+class Lec04 {
+	
+	public static <T> T newInstance(T t) {
+		return t;
+	}
+}
+
+class Lec44 {
+	public static Object newInstance(Object obj) {
+		Box box = new Box();
+		return ;
+	}
+}
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
