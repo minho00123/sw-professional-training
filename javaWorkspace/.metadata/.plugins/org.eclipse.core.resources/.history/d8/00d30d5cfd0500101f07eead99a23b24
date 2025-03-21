@@ -1,0 +1,11 @@
+package com.am;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		// StringTokenizer
+		String msg = "java db web framework";
+		String[] arr1 = msg.split(" ");
+	}
+
+}

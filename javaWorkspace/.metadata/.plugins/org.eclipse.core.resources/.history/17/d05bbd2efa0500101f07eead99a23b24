@@ -1,0 +1,35 @@
+package com.am;
+
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Vector;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Vector<String> vec = new Vector<>();
+		vec.addElement("1111");
+		vec.addElement("2222");
+		vec.add("3333");
+		vec.add("4444");
+
+		for (int i = 0; i < vec.size(); i++) {
+//			String msg = vec.elementAt(i);
+			String msg = vec.get(i);
+			System.out.println(msg);
+		}
+
+		Enumeration<String> enu = vec.elements();
+		while (enu.hasMoreElements()) {
+			String msg = enu.nextElement();
+			System.out.println(msg);
+		}
+
+		Iterator<String> ite = vec.iterator();
+		while (ite.hasNext()) {
+			String msg = ite.next();
+			System.out.println(msg);
+		}
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.pm;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Date d = new Date();
+		SimpleDateFormat sdf;
+		sdf = new SimpleDateFormat();
+		String msg = sdf.format(d);
+		
+	}
+
+}

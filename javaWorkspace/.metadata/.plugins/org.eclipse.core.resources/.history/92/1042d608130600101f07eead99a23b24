@@ -1,0 +1,18 @@
+package com.pm;
+
+import java.util.Calendar;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Calendar rightNow = Calendar.getInstance();
+		System.out.println(rightNow.get(0));
+		System.out.println(rightNow.get(1));
+		System.out.println(rightNow.get(2));
+		System.out.println(rightNow.get(3));
+		System.out.println(rightNow.get(4));
+		System.out.println(rightNow.get(5));
+		System.out.println(rightNow.get(6));
+	}
+
+}

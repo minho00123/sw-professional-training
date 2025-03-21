@@ -1,0 +1,10 @@
+package com.pm;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		// 切积己利包府橇肺弊伐(ver 0.12.0) - use Map
+		ystem.out.println("切积己利包府橇肺弊伐(ver 0.12.0)");
+	}
+
+}

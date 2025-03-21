@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		int[] lotto = { 2, 44, 32, 12, 38, 8};
+		
+	}
+
+}

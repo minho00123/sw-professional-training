@@ -1,0 +1,31 @@
+package com.pm;
+
+import java.util.Calendar;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Calendar cal = Calendar.getInstance();
+		System.out.println(cal.get(Calendar.YEAR) + "년");
+		switch (cal.get(Calendar.MONTH)) {
+		case Calendar.JANUARY:
+			System.out.println("월");
+			break;
+		case Calendar.FEBRUARY:
+			System.out.println("월");
+			break;
+		case Calendar.MARCH:
+			System.out.println("월");
+			break;
+		case Calendar.APRIL:
+			System.out.println("월");
+			break;
+
+		default:
+			break;
+		}
+//		System.out.println(cal.get(Calendar.MONTH) + "월");
+		System.out.println(cal.get(Calendar.DATE) + "일");
+	}
+
+}

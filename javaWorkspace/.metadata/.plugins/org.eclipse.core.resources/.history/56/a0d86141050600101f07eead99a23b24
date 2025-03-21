@@ -1,0 +1,18 @@
+package com.am;
+
+import java.util.Optional;
+
+public class Ex11 {
+
+	public static String func01() {
+		return null;
+	}
+
+	public static void main(String[] args) {
+		// Optional
+		String msg = Ex11.func01();
+		msg = msg.trim();
+		Optional op = new Optional();
+	}
+
+}

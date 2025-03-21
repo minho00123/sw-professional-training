@@ -1,0 +1,14 @@
+package com.pm;
+
+import java.util.Date;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		Date d = new Date();
+		System.out.println(d.toString());
+		System.out.println(d.toLocaleString());
+		System.out.println(d.toString());
+	}
+
+}

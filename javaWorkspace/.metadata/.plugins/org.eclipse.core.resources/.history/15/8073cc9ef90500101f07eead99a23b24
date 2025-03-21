@@ -1,0 +1,12 @@
+package com.am;
+
+import java.util.Vector;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Vector<String> vec = new Vector<>();
+		vec.addElement("1111");
+	}
+
+}

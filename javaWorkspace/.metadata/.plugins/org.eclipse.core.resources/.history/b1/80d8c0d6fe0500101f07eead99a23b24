@@ -1,0 +1,16 @@
+package com.am;
+
+import java.util.StringTokenizer;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		String data = "11 22 33\n22 33 44\n66 77 88";
+		StringTokenizer stk = new StringTokenizer(data, " ");
+
+		while (stk.hasMoreTokens()) {
+			System.out.println(stk.nextToken());
+		}
+	}
+
+}

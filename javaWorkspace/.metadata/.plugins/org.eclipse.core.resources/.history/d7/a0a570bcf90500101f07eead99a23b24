@@ -1,0 +1,20 @@
+package com.am;
+
+import java.util.Vector;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		Vector<String> vec = new Vector<>();
+		vec.addElement("1111");
+		vec.addElement("2222");
+		vec.addElement("3333");
+		vec.addElement("4444");
+		
+		for (int i = 0; i < vec.size(); i++) {
+			vec.elementAt(i);
+			System.out.println();			
+		}
+	}
+
+}

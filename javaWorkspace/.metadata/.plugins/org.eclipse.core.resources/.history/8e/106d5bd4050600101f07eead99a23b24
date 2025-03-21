@@ -1,0 +1,29 @@
+package com.am;
+
+import java.util.Optional;
+
+public class Ex11 {
+
+	public static String func01() {
+		return null;
+	}
+
+	public static Optional<String> func02() {
+//		return Optional.empty();
+		return Optional.of("");
+	}
+
+	public static void main(String[] args) {
+		// Optional
+//		String msg = Ex11.func01();
+//		if (msg != null)
+//			msg = msg.trim();
+//		System.out.println(msg);
+		Optional result = Ex11.func02();
+		if (result.isPresent())
+			System.out.println(result.get());
+		else
+			System.out.println("¾øÀ½");
+	}
+
+}

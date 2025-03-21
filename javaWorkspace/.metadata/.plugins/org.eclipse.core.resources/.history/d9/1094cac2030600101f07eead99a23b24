@@ -1,0 +1,13 @@
+package com.am;
+
+import java.util.Properties;
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		// Properties
+		Properties props = new Properties();
+		
+	}
+
+}

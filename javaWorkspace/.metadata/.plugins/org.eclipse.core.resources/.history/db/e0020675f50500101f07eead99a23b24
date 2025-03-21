@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// 1 ~ 45
+		// 0.0 <= Math.random < 1.0
+	}
+
+}
