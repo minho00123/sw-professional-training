@@ -1,0 +1,51 @@
+package com.pm;
+
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextArea;
+
+public class Ex11 extends Frame {
+
+	public Ex11() {
+		setLayout(new GridLayout(2, 1));
+		Panel p1 = new Panel();
+		Panel p2 = new Panel();
+//		p1.setBackground(Color.BLUE);
+//		p2.setBackground(Color.ORANGE);
+		p2.setLayout(new BorderLayout());
+
+		p1.setLayout(new GridLayout(5, 1));
+		Panel row1 = new Panel();
+		row1.add(new Label("이름"));
+		p1.add(row1);
+		Panel row2 = new Panel();
+		row2.add(new Label("아이디"));
+		p1.add(row2);
+		Panel row3 = new Panel();
+		row3.add(new Label("비밀번호"));
+		p1.add(row3);
+		Panel row4 = new Panel();
+		row4.add(new Label("전화번호"));
+		p1.add(row4);
+		Panel row5 = new Panel();
+		row5.add(new Label("취미"));
+		p1.add(row5);
+
+		p2.add(new Label("하고자하는 말"), BorderLayout.NORTH);
+		p2.add(new TextArea(), BorderLayout.CENTER);
+		add(p1);
+		add(p2);
+
+		setLocation(100, 100);
+		setSize(400, 600);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex11();
+	}
+
+}

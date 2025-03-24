@@ -1,0 +1,14 @@
+package com.am;
+
+import java.awt.Frame;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+		
+		f.setSize(300, 200);
+		f.setVisible(true);
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.am;
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+		f.setLayout(new FlowLayout());
+		Font font = null;
+		Button btn1 = new Button("글자");
+		btn1.setLabel("수정");
+		btn1.setFont(font);
+//		btn1.setSize(500, 300);
+//		btn1.setLocation(500, 300);
+
+		System.out.println(btn1.getLabel());
+		f.add(btn1);
+
+		f.setTitle("제목");
+		f.setLocation(100, 100);
+		f.setSize(300, 200);
+		f.setVisible(true);
+	}
+
+}

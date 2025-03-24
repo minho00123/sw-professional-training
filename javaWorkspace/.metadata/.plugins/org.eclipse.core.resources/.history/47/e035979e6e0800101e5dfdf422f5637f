@@ -1,0 +1,21 @@
+package com.am;
+
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex09 extends Frame {
+
+	public Ex09() {
+		Panel p1 = new Panel();
+		Panel p2 = new Panel();
+		Panel p3 = new Panel();
+		setLocation(100, 100);
+		setSize(300, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex09();
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.am;
+
+import java.awt.Frame;
+
+public class Ex04 extends Frame {
+
+	public Ex04() {
+		setLocation(100, 100);
+		setSize(300, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex04();
+	}
+
+}

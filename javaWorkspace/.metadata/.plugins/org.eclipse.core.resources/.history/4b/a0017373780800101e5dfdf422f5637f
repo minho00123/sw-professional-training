@@ -1,0 +1,16 @@
+package com.pm;
+
+import java.awt.Frame;
+
+public class Ex08 extends Frame {
+
+	public Ex08() {
+		Panel name = new Panel();
+
+	}
+
+	public static void main(String[] args) {
+		new Ex08();
+	}
+
+}

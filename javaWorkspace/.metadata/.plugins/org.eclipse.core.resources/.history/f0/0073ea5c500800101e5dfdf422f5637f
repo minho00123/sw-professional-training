@@ -1,0 +1,22 @@
+package com.am;
+
+import java.awt.Button;
+import java.awt.Frame;
+
+public class Ex02 extends Frame {
+
+	public Ex02() {
+
+		java.awt.Button btn1 = new Button();
+		java.awt.Button btn2 = new Button();
+
+		this.setLocation(500, 300);
+		this.setSize(400, 300);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex02();
+	}
+
+}

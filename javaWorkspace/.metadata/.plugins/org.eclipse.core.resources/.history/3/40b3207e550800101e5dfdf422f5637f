@@ -1,0 +1,11 @@
+package com.am;
+
+import java.awt.Frame;
+
+public class Ex03 extends Frame {
+
+	public static void main(String[] args) {
+		new Ex03();
+	}
+
+}

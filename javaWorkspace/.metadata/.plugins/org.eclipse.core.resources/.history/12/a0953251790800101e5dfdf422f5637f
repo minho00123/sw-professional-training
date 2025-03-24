@@ -1,0 +1,27 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+
+public class Ex08 extends Frame {
+
+	public Ex08() {
+		Panel name = new Panel();
+		Label labelName = new Label("¿Ã∏ß");
+		TextField textField = new TextField();
+		
+		name.add(labelName);
+		name.add(textField);
+		add(name);
+		setLocation(500, 200);
+		setSize(500, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex08();
+	}
+
+}

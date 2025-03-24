@@ -1,0 +1,36 @@
+package com.pm;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.TextField;
+
+public class Ex10 extends Frame {
+
+	public Ex10() {
+		Panel main = new Panel();
+		BorderLayout mainLayout = new BorderLayout();
+
+		Panel outputField = new Panel();
+		Font font = new Font("", 0, 50);
+		TextField visualField = new TextField();
+		visualField.setFont(font);
+		outputField.add(visualField);
+
+		Panel inputField = new Panel();
+
+		main.add(outputField, BorderLayout.NORTH);
+		main.add(inputField, BorderLayout.CENTER);
+		add(main);
+
+		setLocation(100, 100);
+		setSize(300, 400);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex10();
+	}
+
+}

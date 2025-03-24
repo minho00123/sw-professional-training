@@ -1,0 +1,19 @@
+package com.am;
+
+import java.awt.Frame;
+
+public class Ex05 extends Frame {
+
+	public Ex05() {
+		
+		
+		setLocation(100, 100);
+		setSize(400, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex05();
+	}
+
+}

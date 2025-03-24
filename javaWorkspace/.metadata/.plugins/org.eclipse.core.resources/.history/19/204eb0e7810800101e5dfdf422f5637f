@@ -1,0 +1,21 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex10 extends Frame {
+	
+	public Ex10() {
+		Panel main = new Panel();
+		
+		
+		main.add(outputField);
+		main.add(numberField);
+		add(main);
+	}
+
+	public static void main(String[] args) {
+		new Ex10();
+	}
+
+}

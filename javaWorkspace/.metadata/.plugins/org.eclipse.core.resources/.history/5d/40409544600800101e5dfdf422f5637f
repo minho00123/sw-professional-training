@@ -1,0 +1,21 @@
+package com.am;
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+		f.setLayout(new FlowLayout());
+
+		Button btn1 = new Button();
+
+		f.setTitle("Á¦¸ñ");
+		f.setLocation(100, 100);
+		f.setSize(300, 200);
+		f.setVisible(true);
+	}
+
+}

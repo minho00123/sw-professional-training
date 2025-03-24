@@ -1,0 +1,58 @@
+package com.pm;
+
+import java.awt.Choice;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+
+public class Ex08 extends Frame {
+
+	public Ex08() {
+		Panel name = new Panel();
+		Panel id = new Panel();
+		Panel password = new Panel();
+		Panel telephone = new Panel();
+		Panel hobbies = new Panel();
+		Panel textArea = new Panel();
+
+		Label nameLabel = new Label("이름");
+		Label idLabel = new Label("아이디");
+		Label passwordLabel = new Label("패스워드");
+		Label telephoneLabel = new Label("전화번호");
+		Label hobbiesLabel = new Label("취미");
+		Label textAreaLabel = new Label("하고자하는 일");
+
+		TextField nameTextField = new TextField(30);
+		TextField idTextField = new TextField(30);
+		TextField passwordTextField = new TextField(30);
+
+		Choice list = new Choice();
+		list.add("010");
+		list.add("011");
+		list.add("017");
+
+		name.add(nameLabel);
+		name.add(nameTextField);
+		id.add(idLabel);
+		id.add(idTextField);
+		password.add(passwordLabel);
+		password.add(passwordTextField);
+		telephone.add(list);
+		add(name);
+		add(id);
+		add(password);
+		GridLayout layout = new GridLayout(6, 1);
+		setLayout(layout);
+		setLocation(500, 200);
+		setSize(500, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex08();
+	}
+
+}

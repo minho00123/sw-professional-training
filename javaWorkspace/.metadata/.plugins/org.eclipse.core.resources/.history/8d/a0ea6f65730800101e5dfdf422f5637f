@@ -1,0 +1,20 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex04 extends Frame {
+
+	public Ex04() {
+		Panel p = new Panel();
+		
+		setLocation(100, 100);
+		setSize(300, 400);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex04();
+	}
+
+}

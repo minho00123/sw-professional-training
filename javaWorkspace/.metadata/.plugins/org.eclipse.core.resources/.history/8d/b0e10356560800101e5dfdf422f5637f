@@ -1,0 +1,38 @@
+package com.am;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+
+public class Ex03 extends Frame {
+
+	public Ex03() {
+		BorderLayout mgr = new BorderLayout();
+		setLayout(mgr);
+
+		Button btn1 = new Button();
+		Button btn2 = new Button();
+		Button btn3 = new Button();
+		Button btn4 = new Button();
+		Button btn5 = new Button();
+		add(btn1, "North");
+		add(btn2, "South");
+		add(btn3, "East");
+		add(btn4, "West");
+		add(btn5, "Center");
+		add("North", btn1);
+		add("South", btn2);
+		add("East", btn3);
+		add("West", btn4);
+		add("Center", btn5);
+
+		setLocation(100, 100);
+		setSize(500, 400);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex03();
+	}
+
+}
