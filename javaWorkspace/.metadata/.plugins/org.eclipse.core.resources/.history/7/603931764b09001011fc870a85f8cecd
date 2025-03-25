@@ -1,0 +1,24 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.TextField;
+
+public class Ex08 extends Frame {
+
+	public Ex08() {
+		Panel p = new Panel();
+		
+		TextField tf = new TextField();
+		
+		p.add(tf);
+		add(p);
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex08();
+	}
+
+}

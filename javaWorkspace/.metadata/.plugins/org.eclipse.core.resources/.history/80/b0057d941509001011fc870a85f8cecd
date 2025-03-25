@@ -1,0 +1,17 @@
+package com.am;
+
+import java.awt.Dimension;
+import java.awt.Frame;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+		
+		f.setLocation(100, 100);
+		Dimension dim = new Dimension(400, 300);
+		f.setSize(dim);
+		f.setVisible(true);
+	}
+
+}

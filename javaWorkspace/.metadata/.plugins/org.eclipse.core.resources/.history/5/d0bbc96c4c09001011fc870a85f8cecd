@@ -1,0 +1,25 @@
+package com.pm;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex09 extends Frame {
+
+	public Ex09() {
+		Panel p = new Panel();
+		
+		Button btn = new Button("¹öÆ°");
+		p.add(btn);
+		btn.addActionListener(this);
+		
+		add(p);
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex09();
+	}
+
+}

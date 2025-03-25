@@ -1,0 +1,63 @@
+package com.pm;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.Panel;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Ex11 extends JFrame implements ActionListener {
+
+	public Ex11() {
+		setLayout(new BorderLayout());
+		Panel center = new Panel();
+		Panel down = new Panel();
+		down.setSize(500, 150);
+		down.setLayout(null);
+		down.setBackground(Color.GREEN);
+		Image img1 = Toolkit.getDefaultToolkit().getImage("scissor.png");
+		Image img2 = Toolkit.getDefaultToolkit().getImage("rock.png");
+		Image img3 = Toolkit.getDefaultToolkit().getImage("paper.png");
+		JButton btn1 = new JButton(new ImageIcon(img1));
+		JButton btn2 = new JButton(new ImageIcon(img2));
+		JButton btn3 = new JButton(new ImageIcon(img3));
+		btn1.add
+
+		btn1.setLocation(130 * 0, 0);
+		btn2.setLocation(130 * 1, 0);
+		btn3.setLocation(130 * 2, 0);
+		btn1.setSize(130, 130);
+		btn2.setSize(130, 130);
+		btn3.setSize(130, 130);
+		btn1.setVisible(true);
+		btn2.setVisible(true);
+		btn3.setVisible(true);
+		down.add(btn1);
+		down.add(btn2);
+		down.add(btn3);
+
+		add(center, BorderLayout.CENTER);
+		add(down, BorderLayout.SOUTH);
+
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 500, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex11();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

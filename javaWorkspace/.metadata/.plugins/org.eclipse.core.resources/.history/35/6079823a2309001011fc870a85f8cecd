@@ -1,0 +1,24 @@
+package com.am;
+
+import java.awt.Frame;
+import java.awt.Menu;
+import java.awt.MenuBar;
+import java.awt.MenuItem;
+
+public class Ex05 extends Frame {
+
+	public Ex05() {
+		MenuBar bar = new MenuBar();
+		Menu fileMenu = new Menu("파일");
+		MenuItem newFile = new MenuItem("새파일");
+		MenuItem open = new MenuItem("열기");
+
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex05();
+	}
+
+}

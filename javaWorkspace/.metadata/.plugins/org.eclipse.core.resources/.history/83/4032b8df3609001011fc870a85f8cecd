@@ -1,0 +1,23 @@
+package com.pm;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex01 extends Frame {
+
+	public Ex01() {
+		Panel p = new Panel();
+
+		Button btn = new Button("click");
+
+		add(p);
+		setBounds(100, 100, 400, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

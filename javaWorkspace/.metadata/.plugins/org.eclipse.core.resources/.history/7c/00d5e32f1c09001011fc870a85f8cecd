@@ -1,0 +1,32 @@
+package com.am;
+
+import java.awt.Canvas;
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.Graphics;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+
+		Canvas can = new Canvas() {
+			@Override
+			public void paint(Graphics g) {
+//				g.drawChars(new char[] { 'A', 'B', 'C' }, 0, 3, 100, 100);
+				g.drawLine(0, 0, 200, 200);
+				g.drawRect(0, 0, 200, 200);
+				g.drawOval(0, 0, 200, 200);
+				g.drawArc(0, 0, 200, 200, 0, 180);
+				
+			}
+		};
+
+		f.add(can);
+		f.setLocation(100, 100);
+		Dimension dim = new Dimension(400, 300);
+		f.setSize(dim);
+		f.setVisible(true);
+	}
+
+}

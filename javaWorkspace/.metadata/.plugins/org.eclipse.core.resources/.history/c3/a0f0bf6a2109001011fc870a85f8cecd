@@ -1,0 +1,26 @@
+package com.am;
+
+import java.awt.Frame;
+import java.awt.Menu;
+import java.awt.MenuBar;
+
+public class Ex04 extends Frame {
+
+	public Ex04() {
+
+		MenuBar bar = new MenuBar();
+		bar.add(new Menu("첫번째"));
+		bar.add(new Menu("두번째"));
+		bar.add(new Menu("세번째"));
+		bar.add(new Menu("네번째"));
+
+		this.setMenuBar(bar);
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex04();
+	}
+
+}

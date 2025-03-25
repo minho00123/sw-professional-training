@@ -1,0 +1,41 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+
+public class Ex07 extends Frame implements ComponentListener {
+	
+	public Ex07() {
+		
+		this.addComponentListener(this);
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex07();
+	}
+
+	@Override
+	public void componentResized(ComponentEvent e) {
+		System.out.println("");
+	}
+
+	@Override
+	public void componentMoved(ComponentEvent e) {
+		System.out.println("");
+	}
+
+	@Override
+	public void componentShown(ComponentEvent e) {
+		System.out.println("");
+	}
+
+	@Override
+	public void componentHidden(ComponentEvent e) {
+
+		System.out.println("");
+	}
+
+}

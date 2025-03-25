@@ -1,0 +1,27 @@
+package com.pm;
+
+import java.awt.Choice;
+import java.awt.Frame;
+import java.awt.Panel;
+
+public class Ex06 extends Frame {
+	
+	public Ex06() {
+		Panel p = new Panel();
+		
+		Choice cho = new Choice();
+		cho.add("item1");
+		cho.add("item2");
+		cho.add("item3");
+		cho.add("item4");
+		
+		add(p);
+		setBounds(100, 100, 500, 400);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex06();
+	}
+
+}

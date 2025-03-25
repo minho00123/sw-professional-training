@@ -1,0 +1,49 @@
+package com.pm;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Panel;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Ex11 extends JFrame {
+
+	public Ex11() {
+		setLayout(new BorderLayout());
+		Panel center = new Panel();
+		Panel down = new Panel();
+		down.setSize(500, 150);
+		down.setLayout(null);
+		down.setBackground(Color.GREEN);
+		JButton btn1 = new JButton();
+		JButton btn2 = new JButton();
+		JButton btn3 = new JButton();
+		Image img1 = Toolkit.getDefaultToolkit().getImage("scissor.png");
+		btn1.setLocation(130*0, 0);
+		btn2.setLocation(130*1, 0);
+		btn3.setLocation(130*2, 0);
+		btn1.setSize(130, 130);
+		btn2.setSize(130, 130);
+		btn3.setSize(130, 130);
+		btn1.setVisible(true);
+		btn2.setVisible(true);
+		btn3.setVisible(true);
+		down.add(btn1);
+		down.add(btn2);
+		down.add(btn3);
+
+		add(center, BorderLayout.CENTER);
+		add(down, BorderLayout.SOUTH);
+
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 500, 500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex11();
+	}
+
+}

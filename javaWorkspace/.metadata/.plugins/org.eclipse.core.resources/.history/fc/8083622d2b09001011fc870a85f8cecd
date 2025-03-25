@@ -1,0 +1,17 @@
+package com.am;
+
+import javax.swing.JFrame;
+
+public class Ex07 extends JFrame {
+
+	public Ex07() {
+//		addWindowListener(new Ex06.MyListener());
+		this.setBounds(100, 100, 300, 200);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex07();
+	}
+
+}

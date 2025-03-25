@@ -1,0 +1,27 @@
+package com.pm;
+
+import java.awt.Frame;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+public class Ex05 extends Frame {
+	JLabel la;
+
+	public Ex05() {
+		setLayout(null);
+		
+		Image img = Toolkit.getDefaultToolkit().getImage("logo.png");
+		Icon icon = new ImageIcon(img);
+		la = new JLabel(icon);
+		
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Ex05();
+	}
+
+}

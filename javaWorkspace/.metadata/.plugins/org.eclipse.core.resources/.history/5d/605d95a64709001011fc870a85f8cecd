@@ -1,0 +1,63 @@
+package com.pm;
+
+import java.awt.Choice;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class Ex06 extends Frame implements MouseListener {
+	Choice cho;
+
+	public Ex06() {
+		Panel p = new Panel();
+
+		cho = new Choice();
+		cho.add("item1");
+		cho.add("item2");
+		cho.add("item3");
+		cho.add("item4");
+		
+		cho.addMouseListener(this);
+		p.add(cho);
+
+		add(p);
+		setBounds(100, 100, 500, 400);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex06();
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

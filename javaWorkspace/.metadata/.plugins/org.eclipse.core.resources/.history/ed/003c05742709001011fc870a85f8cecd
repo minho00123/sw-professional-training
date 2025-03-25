@@ -1,0 +1,13 @@
+package com.am;
+
+public class Ex06 extends Frame {
+	
+	public Ex06() {
+		
+	}
+
+	public static void main(String[] args) {
+		new Ex06();
+	}
+
+}

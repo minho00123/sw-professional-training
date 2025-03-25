@@ -1,0 +1,23 @@
+package com.am;
+
+import java.awt.Dialog;
+import java.awt.Dimension;
+import java.awt.Frame;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		Frame f = new Frame();
+
+		f.setLocation(100, 100);
+		Dimension dim = new Dimension(400, 300);
+		f.setSize(dim);
+		f.setVisible(true);
+
+		Dialog dia1 = new Dialog(f);
+		dia1.setLocation(500, 100);
+		dia1.setSize(dim);
+		dia1.setVisible(true);
+	}
+
+}

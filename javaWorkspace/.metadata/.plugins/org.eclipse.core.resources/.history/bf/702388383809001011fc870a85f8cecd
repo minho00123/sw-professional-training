@@ -1,0 +1,57 @@
+package com.pm;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+public class Ex01 extends Frame {
+
+	static class MyListen implements MouseListener {
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			System.out.println("클릭");
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			System.out.println("누를때");
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			System.out.println("눌리고나서위로올라올때");
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			System.out.println("컴포넌트 안쪽으로");
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			System.out.println("컴포넌트 밖으로");
+		}
+
+	}
+
+	public Ex01() {
+		Panel p = new Panel();
+		TextField tf = new TextField();
+		Button btn = new Button("click");
+		tf.addMouseListener(new MyListen());
+		p.add(tf);
+		p.add(btn);
+		add(p);
+		setBounds(100, 100, 400, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex01();
+	}
+
+}
