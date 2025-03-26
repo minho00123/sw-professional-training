@@ -1,0 +1,18 @@
+package com.am;
+
+import java.io.File;
+
+public class Ex02ByInstructor {
+
+	public static void main(String[] args) {
+		String target = ".";
+		
+		File file = new File(target);
+		if (file.exists()) {
+			
+		} else {
+			System.out.println("잘못된 경로입니다.");
+		}
+	}
+
+}

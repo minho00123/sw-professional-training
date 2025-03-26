@@ -1,0 +1,17 @@
+package com.am;
+
+import java.io.File;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		String name = "target2.txt";
+		File file = new File(name);
+		if (file.exists()) {
+			System.out.println("¡∏¿Á«‘");
+		} else {
+			file.createNewFile();
+		}
+	}
+
+}
