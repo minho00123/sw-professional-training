@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex02 extends Thread {
+
+	public static void main(String[] args) {
+		Ex02 me = new Ex02();
+		me.run();
+	}
+
+}

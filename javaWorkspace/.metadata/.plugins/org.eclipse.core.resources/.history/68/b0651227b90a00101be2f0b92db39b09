@@ -1,0 +1,16 @@
+package com.am;
+
+public class Ex08 extends Thread {
+
+	public static void main(String[] args) {
+		Ex08 me = new Ex08();
+		
+		me.start();
+	}
+	
+@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+}

@@ -1,0 +1,25 @@
+package com.pm;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		File file = new File("data09.txt");
+		
+		OutputStream os = null;
+		java.io.OutputStreamWriter osw = null;
+		try {
+			file.createNewFile();
+			os = new FileOutputStream(file);
+			
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

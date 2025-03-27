@@ -1,0 +1,24 @@
+package com.am;
+
+public class Ex03 implements Runnable {
+	static Thread thr = new Thread(me);
+
+	public static void main(String[] args) {
+		Ex03 me = new Ex03();
+		thr.start();
+		for (int i = 0; i < 100; i++) {
+			System.out.println("main thread i=" + i);
+		}
+		System.out.println("main thread end");
+	}
+
+	@Override
+	public void run() {
+		System.out.println(thr.getName() + " thread start");
+		for (int i = 0; i < 100; i++) {
+			System.out.println(getName() + " thread i=" + i);
+		}
+		System.out.println(getName() + " thread end");
+	}
+
+}

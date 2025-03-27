@@ -1,0 +1,10 @@
+package com.am;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// ¾²·¹µå
+		System.out.println(Thread.currentThread().getName());
+	}
+
+}

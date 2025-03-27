@@ -1,0 +1,32 @@
+package com.am;
+
+public class Ex08 extends Thread {
+
+	public Ex08() {
+//		super("스레드1");
+//		setName("이름1");
+	}
+
+	public static void main(String[] args) {
+		Ex08 me = new Ex08();
+		Ex08 me2 = new Ex08();
+		Ex08 me3 = new Ex08();
+
+		me.setPriority(5);
+		me.setPriority(1);
+		me.setPriority(10);
+		
+		me.start();
+		me2.start();
+		me3.start();
+	}
+
+	@Override
+	public void run() {
+		System.out.println(this.getName());
+		Thread thr = Thread.currentThread();
+		System.out.println(thr.getId());
+		System.out.println(thr.getState());
+		System.out.println(thr.getName() + ":" + thr.getPriority()); // 우선순위
+	}
+}

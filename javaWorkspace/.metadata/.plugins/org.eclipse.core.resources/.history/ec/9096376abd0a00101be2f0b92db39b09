@@ -1,0 +1,24 @@
+package com.am;
+
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.Panel;
+
+public class Ex10 extends Frame{
+	Label la;
+	
+	public Ex10() {
+		setLayout(new BorderLayout());
+		Panel p = new Panel();
+		add(p, BorderLayout.SOUTH);
+		add(la, BorderLayout.CENTER);
+		setBounds(100, 100, 200, 200);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Ex10();
+	}
+
+}

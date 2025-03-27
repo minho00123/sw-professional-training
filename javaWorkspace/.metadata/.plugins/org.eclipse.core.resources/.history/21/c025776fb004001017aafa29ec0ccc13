@@ -1,7 +1,0 @@
-package com.pm;
-
-interface Remocon {
-	default void powerOn() {
-		System.out.println("Hello");
-	}
-}

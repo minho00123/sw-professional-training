@@ -1,0 +1,13 @@
+package com.am;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		Thread thr1 = new Thread();
+		Thread thr2 = new Thread();
+		
+		thr1.start();
+		thr2.start();
+	}
+
+}

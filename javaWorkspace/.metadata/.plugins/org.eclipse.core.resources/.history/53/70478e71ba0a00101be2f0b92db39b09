@@ -1,0 +1,24 @@
+package com.am;
+
+public class Ex08 extends Thread {
+
+	public Ex08() {
+		super("스레드1");
+		setName("이름1");
+	}
+
+	public static void main(String[] args) {
+		Ex08 me = new Ex08();
+
+		me.start();
+	}
+
+	@Override
+	public void run() {
+		System.out.println(getName());
+		Thread thr = Thread.currentThread();
+		System.out.println(thr.getName());
+		System.out.println(thr.getId());
+		System.out.println(thr.getState());
+	}
+}

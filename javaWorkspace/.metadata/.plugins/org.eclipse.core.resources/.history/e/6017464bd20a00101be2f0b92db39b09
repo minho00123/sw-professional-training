@@ -1,0 +1,25 @@
+package com.pm;
+
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		File file = new File("data02.bin");
+		OutputStream os = null;
+		DataOutputStream dos = null;
+		try {
+			file.createNewFile();
+			os = new FileOutputStream(file);
+			
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

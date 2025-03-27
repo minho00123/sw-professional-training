@@ -1,0 +1,36 @@
+package com.pm;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		String msg = "hello world";
+
+		ByteArrayInputStream bais = null;
+		ByteArrayOutputStream baos = null;
+
+		try {
+			baos = new ByteArrayOutputStream();
+			baos.write(msg.getBytes());
+			byte[] arr = baos.toByteArray();
+			bais = new ByteArrayInputStream(arr);
+
+			while (true) {
+				int su = bais.read();
+				if (su == -1)
+					break;
+				System.out.println((char)su);
+			}
+
+			baos.close();
+			bais.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

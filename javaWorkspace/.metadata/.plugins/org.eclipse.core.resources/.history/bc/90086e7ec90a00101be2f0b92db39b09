@@ -1,0 +1,53 @@
+package com.am;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.Panel;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Ex10 extends Frame implements Runnable {
+	Label la;
+
+	public Ex10() {
+		setLayout(new BorderLayout());
+		la = new Label();
+		Panel p = new Panel();
+		Button btn1 = new Button();
+		Button btn2 = new Button();
+		p.add(btn1);
+		p.add(btn2);
+		add(p, BorderLayout.SOUTH);
+		add(la, BorderLayout.CENTER);
+		setBounds(100, 100, 200, 200);
+		setVisible(true);
+	}
+
+	public void loop() {
+		Date d = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+		String text = sdf.format(d);
+		la.setText(text);
+	}
+
+	public static void main(String[] args) {
+		Ex10 me = new Ex10();
+		Thread thr = new Thread(me);
+		thr.start();
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			loop();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

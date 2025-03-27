@@ -1,0 +1,38 @@
+package com.pm;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.util.Vector;
+
+public class Ex11 {
+
+	public static void main(String[] args) {
+		File file = new File("data11.bin");
+
+		OutputStream os = null;
+		java.io.ObjectOutputStream oos = null;
+		try {
+			file.createNewFile();
+			os = new FileOutputStream(file);
+			oos = new ObjectOutputStream(os);
+
+			oos.writeObject("¹®ÀÚ¿­");
+			int[] arr1 = { 1, 3, 5, 7 };
+			oos.writeObject(arr1);
+			Vector vec = new Vector();
+			vec.add("vec1");
+			vec.add("vec2");
+			vec.add("vec3");
+			oos.writeObject(vec);
+
+			oos.close();
+			os.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
