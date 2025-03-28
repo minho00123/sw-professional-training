@@ -1,0 +1,12 @@
+package com.am;
+
+public class Ex01 extends Thread {
+
+	public static void main(String[] args) {
+		// 1~1000
+		// 1~500 - Thread 1
+		// 501~1000 - Thread 2
+		
+	}
+
+}

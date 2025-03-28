@@ -1,0 +1,30 @@
+package com.am;
+
+class Lec06 extends Thread {
+	boolean boo;
+	
+	public synchronized void func() {
+		if (boo) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		} else {
+			interrupt();
+		}
+	}
+	
+	@Override
+	public void run() {
+		func();
+	}
+}
+
+public class Ex06 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

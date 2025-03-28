@@ -1,0 +1,17 @@
+package com.am;
+
+import java.awt.Frame;
+
+public class Ex07 extends Frame {
+
+	public Ex07() {
+
+		setBounds(100, 100, 500, 300);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Ex07();
+	}
+
+}

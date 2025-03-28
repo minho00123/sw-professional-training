@@ -1,0 +1,32 @@
+package com.am;
+
+public class Ex05 extends Thread {
+
+	public static void main(String[] args) {
+		Ex05 me = new Ex05();
+		me.start();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+//		me.interrupt();
+		me.notify();
+	}
+
+	public synchronized void func() {
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void run() {
+		System.out.println(getName() + " start");
+		func();
+		System.out.println(getName() + " end");
+	}
+
+}
