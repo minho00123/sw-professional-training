@@ -1,0 +1,24 @@
+package com.step03;
+
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.TextField;
+
+public class Client extends Frame {
+	TextArea ta;
+	TextField tf;
+
+	public Client() {
+		setLayout(new BorderLayout());
+		
+		
+		setBounds(100, 100, 400, 600);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new Client();
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.am;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		java.net.InetAddress addr;
+		
+		try {
+			addr = InetAddress.getByName("https://naver.com");
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

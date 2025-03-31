@@ -1,0 +1,19 @@
+package com.step01;
+
+import java.io.IOException;
+import java.net.Socket;
+
+public class Client {
+
+	public static void main(String[] args) {
+		java.net.Socket sock;
+
+		try {
+			
+		sock = new Socket();
+		} cathc (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

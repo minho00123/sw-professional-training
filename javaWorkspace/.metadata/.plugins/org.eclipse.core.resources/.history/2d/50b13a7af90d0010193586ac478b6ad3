@@ -1,0 +1,20 @@
+package com.step02;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		ServerSocket serve;
+		
+		try {
+			serve = new ServerSocket(3000);
+			serve.accept();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

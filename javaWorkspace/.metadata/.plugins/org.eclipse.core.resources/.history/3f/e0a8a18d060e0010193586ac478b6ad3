@@ -1,0 +1,29 @@
+package com.step03;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server extends Thread {
+	Socket sock;
+	
+	public Server(Socket sock) {
+		this.sock = sock;
+	}
+
+	public static void main(String[] args) {
+		ServerSocket serv = null;
+		try {
+			serv = new ServerSocket(3000);
+
+			while (true) {
+				Socket sock = serv.accept();
+				Server me = new Server(socket);
+				me.start();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

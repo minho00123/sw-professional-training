@@ -1,0 +1,18 @@
+package com.step01;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		java.net.ServerSocket serv;
+
+		try {
+			serv = new ServerSocket();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

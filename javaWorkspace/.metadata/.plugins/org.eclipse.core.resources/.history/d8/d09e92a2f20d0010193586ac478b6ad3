@@ -1,0 +1,39 @@
+package com.step01;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		java.net.ServerSocket serv;
+		Socket sock;
+		InputStream is = null;
+		InputStreamReader isr = null;
+		try {
+			serv = new ServerSocket(3000);
+			System.out.println("立加措扁");
+			sock = serv.accept();
+			System.out.println(" 立加凳");
+			is = sock.getInputStream();
+			isr = new InputStreamReader(is);
+
+			while (true) {
+				int su = is.read();
+				if (su == -1)
+					break;
+				System.out.print((char) su);
+			}
+
+			is.close();
+			sock.close();
+			serv.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

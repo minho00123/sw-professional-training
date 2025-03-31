@@ -1,0 +1,36 @@
+package com.step02;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server extends Thread {
+
+	public static void main(String[] args) {
+		ServerSocket serve = null;
+
+		try {
+			serve = new ServerSocket(3000);
+			while (true) {
+				Socket sock = serve.accept();
+				Server me = new Server();
+				me.start();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (serve != null)
+					serve.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	@Override
+	public void run() {
+		
+	}
+
+}

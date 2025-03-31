@@ -1,0 +1,52 @@
+package com.step01;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Client {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		java.net.Socket sock;
+		byte[] arr = { 127, 0, 0, 1 };
+		InetAddress addr;
+		int port = 3000;
+		OutputStream os = null;
+		InputStream is = null;
+		InputStreamReader isr = null;
+		OutputStreamWriter osw = null;
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+		try {
+			addr = InetAddress.getByAddress(arr);
+			sock = new Socket(addr, port);
+			os = sock.getOutputStream();
+			is = sock.getInputStream();
+			isr = new InputStreamReader(is);
+			osw = new OutputStreamWriter(os);
+			br = new BufferedReader(isr);
+			bw = new BufferedWriter(osw);
+			
+			os.write((sc.nextLine() + "\n").getBytes());
+			while (true) {
+				int su = isr.read();
+				if (su == -1)
+					break;
+				System.out.print((char) su);
+			}
+			os.close();
+			sock.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

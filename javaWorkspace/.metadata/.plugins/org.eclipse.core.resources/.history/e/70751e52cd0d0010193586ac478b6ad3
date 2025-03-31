@@ -1,0 +1,21 @@
+package com.am;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		java.net.InetAddress addr;
+		
+		try {
+			addr = InetAddress.getByName("wnaver.com");
+			
+			System.out.println(addr.getHostName());
+			System.out.println(addr.getHostAddress());
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

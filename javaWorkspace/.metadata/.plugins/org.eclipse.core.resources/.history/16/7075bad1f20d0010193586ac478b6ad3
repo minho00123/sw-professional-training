@@ -1,0 +1,31 @@
+package com.step01;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Client {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		java.net.Socket sock;
+		byte[] arr = { 127, 0, 0, 1 };
+		InetAddress addr;
+		int port = 3000;
+		OutputStream os = null;
+		try {
+			addr = InetAddress.getByAddress(arr);
+			sock = new Socket(addr, port);
+			os = sock.getOutputStream();
+			os.write("ÇÑ±Û".getBytes());
+
+			os.close();
+			sock.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

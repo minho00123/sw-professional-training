@@ -1,0 +1,23 @@
+package com.step01;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class Server {
+
+	public static void main(String[] args) {
+		java.net.ServerSocket serv;
+
+		try {
+			serv = new ServerSocket(3000);
+			System.out.println("立加措扁");
+			Socket sock = serv.accept();
+			System.out.println(" 立加凳");
+
+			serv.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
