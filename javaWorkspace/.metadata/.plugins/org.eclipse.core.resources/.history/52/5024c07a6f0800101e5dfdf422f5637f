@@ -1,9 +1,0 @@
-package com.pm;
-
-public class Ex01 extends Frame {
-
-	public static void main(String[] args) {
-
-	}
-
-}

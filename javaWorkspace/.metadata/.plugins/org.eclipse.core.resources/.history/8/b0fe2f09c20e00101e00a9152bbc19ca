@@ -1,0 +1,31 @@
+package com.pm;
+
+import java.sql.SQLException;
+import java.util.Properties;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe"; // <- Oracle url
+		java.util.Properties props = new Properties();
+		props.setProperty("user", "scott");
+		props.setProperty("password", "tiger");
+//		url = "jdbc:mysql://host1:33060/sakila"; // <- mySQL url
+
+		OracleDriver driver = new OracleDriver();
+		java.sql.Connection conn = null;
+		try {
+			System.out.println("立加霖厚");
+			conn = java.sql.DriverManager.getConnection(url, props);
+			System.out.println("立加凳");
+			System.out.println(conn);
+			
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

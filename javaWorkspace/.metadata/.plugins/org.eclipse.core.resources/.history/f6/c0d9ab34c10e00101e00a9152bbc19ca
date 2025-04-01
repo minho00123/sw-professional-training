@@ -1,0 +1,12 @@
+package com.pm;
+
+import oracle.jdbc.driver.OracleDriver;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		OracleDriver driver = new OracleDriver();
+		java.sql.DriverManager.getConnection(url, props);
+	}
+
+}
