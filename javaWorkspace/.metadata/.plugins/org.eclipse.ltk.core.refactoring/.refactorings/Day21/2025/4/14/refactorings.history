@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Day21/stu01.sql&apos; to &apos;stu01.bat&apos;" description="Rename resource &apos;stu01.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="stu01.sql" name="stu01.bat" stamp="1743555993691" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Day21/stu01.bat&apos; to &apos;stu01.sql&apos;" description="Rename resource &apos;stu01.bat&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="stu01.bat" name="stu01.sql" stamp="1743556092725" updateReferences="true"/>
+</session>

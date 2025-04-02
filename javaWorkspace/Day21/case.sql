@@ -1,0 +1,1 @@
+select case when deptno=10 then '영업' when deptno=20 then '관리' when deptno=30 then '생산' end dept from emp;
