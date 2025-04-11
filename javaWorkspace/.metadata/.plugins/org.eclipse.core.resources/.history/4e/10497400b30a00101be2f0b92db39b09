@@ -1,9 +1,0 @@
-package com.am;
-
-public class Ex06 extends Thread {
-
-	public static void main(String[] args) {
-		Ex06 me = new Ex06();
-	}
-
-}

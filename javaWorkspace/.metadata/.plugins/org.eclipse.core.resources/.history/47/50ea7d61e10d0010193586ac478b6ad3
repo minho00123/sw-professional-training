@@ -1,9 +1,0 @@
-package com.am;
-
-public class Ex03 {
-
-	public static void main(String[] args) {
-		String spec = "https:google.com";
-	}
-
-}

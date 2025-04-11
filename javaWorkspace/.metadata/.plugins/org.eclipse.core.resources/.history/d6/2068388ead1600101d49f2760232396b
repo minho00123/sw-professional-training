@@ -1,0 +1,63 @@
+package com.pm;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Ex01 implements Runnable {
+	Socket sock;
+
+	public Ex01(Socket sock) {
+		this.sock = sock;
+	}
+
+	public static void main(String[] args) {
+		ServerSocket serv = null;
+
+		try {
+			serv = new ServerSocket(80);
+			System.out.println("before");
+			while (true) {
+				Socket sock = serv.accept();
+				Ex01 me = new Ex01(sock);
+				Thread thr = new Thread(me);
+				thr.start();
+
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (serv != null)
+					serv.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	@Override
+	public void run() {
+//		System.out.println(sock.getRemoteSocketAddress());
+		OutputStream os = null;
+		try {
+			os = sock.getOutputStream();
+			// http/ver HTTP 상태 코드
+			os.write("HTTP/1.1 200 OK\n".getBytes());
+//			os.write("HTTP/1.1 404 Not Found\n".getBytes());
+			os.write("\n".getBytes());
+			os.write("<h1>hello 한글</h1>".getBytes());
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (os != null)
+					os.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+}
