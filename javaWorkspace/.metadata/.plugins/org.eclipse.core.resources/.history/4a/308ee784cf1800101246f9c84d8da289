@@ -1,0 +1,64 @@
+package com.test;
+
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
+public class StudentGrade {
+	private static int id = 20250001;
+
+	public static void main(String[] args) {
+		Map<Integer, int[]> studentData = new TreeMap<>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("학생성적관리프로그램(ver 0.20.0)");
+
+		while (true) {
+			System.out.println("1.목록 2.랭킹 3.입력 4.수정 5.삭제 0.종료");
+			int input = sc.nextInt();
+
+			if (input == 0) {
+				System.out.println("프로그램을 종료합니다. 이용해주셔서 감사합니다.");
+				sc.close();
+				return;
+			}
+
+			if (input == 1) {
+				System.out.println("------------------------------------------------------------------");
+				System.out.println("학번\t국어\t영어\t수학\t합계\t평균\t랭크");
+				System.out.println("------------------------------------------------------------------");
+				
+				studentData.forEach((key, value) -> {
+					System.out.printf("%d\t%d\t%d\t%d\t%d\t%.2f\t%d%n", key, value[0], value[1], value[2], value[3], value[3] / 3, );
+				});
+			}
+
+			if (input == 2) {
+
+			}
+
+			if (input == 3) {
+				int[] data = new int[4];
+
+				System.out.println("국어> ");
+				data[0] = sc.nextInt();
+				System.out.println("영어> ");
+				data[1] = sc.nextInt();
+				System.out.println("수학> ");
+				data[2] = sc.nextInt();
+
+				data[3] = data[0] + data[1] + data[2];
+
+				studentData.put(id++, data);
+			}
+
+			if (input == 4) {
+
+			}
+
+			if (input == 5) {
+
+			}
+		}
+	}
+
+}

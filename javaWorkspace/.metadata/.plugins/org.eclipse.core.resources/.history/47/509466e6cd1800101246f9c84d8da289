@@ -1,0 +1,47 @@
+package com.test;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class StudentGrade {
+	private static int id = 20250001;
+
+	public static void main(String[] args) {
+		Set<Integer> studentData = new LinkedHashSet<>();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("학생성적관리프로그램(ver 0.20.0)");
+
+		while (true) {
+			System.out.println("1.목록 2.랭킹 3.입력 4.수정 5.삭제 0.종료");
+			int input = sc.nextInt();
+
+			if (input == 0) {
+				System.out.println("프로그램을 종료합니다. 이용해주셔서 감사합니다.");
+				sc.close();
+				return;
+			}
+
+			if (input == 1) {
+
+			}
+
+			if (input == 2) {
+
+			}
+
+			if (input == 3) {
+
+			}
+
+			if (input == 4) {
+
+			}
+
+			if (input == 5) {
+
+			}
+		}
+	}
+
+}

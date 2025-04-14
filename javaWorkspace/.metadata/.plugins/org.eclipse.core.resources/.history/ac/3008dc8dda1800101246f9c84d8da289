@@ -1,0 +1,9 @@
+package com.udp;
+
+public class Client {
+
+	public static void main(String[] args) {
+		java.net.DatagramSocket ds = null;
+	}
+
+}

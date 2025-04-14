@@ -1,0 +1,15 @@
+package com.test;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class StudentGrade {
+	private static int id = 20250001;
+
+	public static void main(String[] args) {
+		Set<Integer> studentData = new LinkedHashSet<>();
+		System.out.println("切积己利包府橇肺弊伐(ver 0.20.0)");
+
+	}
+
+}

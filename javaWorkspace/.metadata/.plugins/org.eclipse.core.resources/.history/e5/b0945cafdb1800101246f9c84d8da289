@@ -1,0 +1,26 @@
+package com.udp;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+
+public class Server {
+
+	public static void main(String[] args) {
+		DatagramSocket sock = null;
+		DatagramPacket pack = null;
+
+		try {
+			sock = new DatagramSocket();
+			
+			sock.receive(p);
+		} catch (SocketException e) {
+			e.printStackTrace();
+		} finally {
+			if (sock != null) {
+				sock.close();
+			}
+		}
+	}
+
+}
