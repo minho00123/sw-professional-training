@@ -1,0 +1,10 @@
+DROP TABLE guest01;
+DROP SEQUENCE guest01_seq;
+
+CREATE SEQUENCE guest01_seq;
+
+CREATE TABLE guest01(
+	idx NUMBER PRIMARY KEY,
+	writer VARCHAR2(15) NOT NULL,
+	content VARCHAR2(2000)
+);

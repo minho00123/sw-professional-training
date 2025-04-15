@@ -1,0 +1,9 @@
+DROP TABLE bbs01;
+
+CREATE TABLE bbs01(
+	num NUMBER PRIMARY KEY,
+	sub VARCHAR2(30),
+	content VARCHAR2(2000),
+	writer VARCHAR2(15),
+	nalja DATE
+);

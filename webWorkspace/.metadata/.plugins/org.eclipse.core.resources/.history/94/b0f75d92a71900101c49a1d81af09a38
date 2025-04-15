@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>내장 객체</h1>
+	<%
+		String addr1 = request.getRemoteAddr();
+		out.print("<p>client ip:" + addr1 + "</p>");
+		int port1 = request.getRemotePort();
+		out.print("<p>client port:" + port1 + "</p>");
+		
+		String addr2 = request.getServerName();
+		out.print("<p>ip:" + addr2 + "</p>");
+		int port2 = request.getServerPort();
+		out.print("<p>port:" + port2 + "</p>");
+	%>
+</body>
+</html>
