@@ -1,0 +1,12 @@
+mysql > bin
+mysqld --initialize --datadir=../data --console
+	 ~~~~root@localhost: Qipor#)k%6lv
+	or (mysqld  --initialize-insecure --datadir=../data --console)	 
+	 
+mysqld --port=3306 --datadir=../data --console
+
+ALTER user 'root'@'localhost' IDENTIFIED BY '1234';
+show databases;
+create database xe;
+use xe;
+
