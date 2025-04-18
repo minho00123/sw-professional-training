@@ -1,0 +1,16 @@
+package com.bbs07.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class MyDb {
+	
+	public static Connection getConnection() throws SQLException {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+
+		return java.sql.DriverManager.getConnection(url, user, password);
+	}
+}

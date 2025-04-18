@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img alt="logo" src="http://www.kibwa.org/data/skin/default/images/da_image/hd_logo.png" >
+	<a href="../">[HOME]</a>
+	<a href="../bbs/">[BBS]</a>
+	<a href="../login/">[login]</a>
+	<hr>
+	<%
+		java.util.List<com.bbs07.model.JavaBean> list = new java.util.ArrayList<>();
+		String sql = "select * from bbs07 order by num desc";
+		
+		java.sql.Connection conn = null;
+		java.sql.Statement stmt = null;
+		java.sql.ResultSet rs = null;
+		
+		try {
+			stmt = com.bbs07.util.MyDb.getConnection().createStatement();
+			rs = stmt.executeQuery(sql);
+		
+			while (rs.next()) {
+				com.bbs07.model.JavaBean bean = new com.bbs07.model.JavaBean();
+				bean.num = rs.getInt("num");
+				bean.sub = rs.getString("sub");
+				bean.id = rs.getString("id");
+				bean.nalja = rs.getDate("nalja");
+				list.add(bean);
+			}
+		} finally {
+			if (rs != null) rs.close();
+			if (stmt != null) stmt.close();
+			if (com.bbs07.util.MyDb.getConnection() != null) {
+				com.bbs07.util.MyDb.getConnection().close();
+			}
+		}
+	%>
+	<h1>list page</h1>
+	<table border="1" width="800" cellspacing="0">
+		<tr>
+			<th width="50">번호</th>
+			<th>제목</th>
+			<th width="100">글쓴이</th>
+			<th width="100">날짜</th>
+		</tr>
+		<%
+			for (int i = 0; i < list.size(); i++) {
+				com.bbs07.model.JavaBean bean = list.get(i);
+		%>
+		<tr>
+			<td><%=bean.getNum() %></td>
+			<td><%=bean.getSub() %></td>
+			<td><%=bean.getId() %></td>
+			<td><%=bean.getNalja() %></td>
+		</tr>
+		<%
+			}
+		%>
+	</table>
+</body>
+</html>

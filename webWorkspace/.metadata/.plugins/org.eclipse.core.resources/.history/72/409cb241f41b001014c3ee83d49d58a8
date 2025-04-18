@@ -1,0 +1,15 @@
+package com.bbs07.util;
+
+import java.sql.Connection;
+
+public class MyDb {
+	
+	public static Connection getConnection() {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+
+		return null;
+	}
+}

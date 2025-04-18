@@ -1,0 +1,20 @@
+package com.bbs07.util;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class MyDb {
+	static Connection conn;
+
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "scott";
+		String password = "tiger";
+
+//		Class.forName(driver);
+//		return java.sql.DriverManager.getConnection(url, user, password);
+		
+		return conn;
+	}
+}

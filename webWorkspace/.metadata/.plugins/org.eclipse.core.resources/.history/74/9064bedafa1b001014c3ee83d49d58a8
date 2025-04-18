@@ -1,0 +1,21 @@
+package com.bbs07.model;
+
+import java.sql.Date;
+
+public class JavaBean {
+	private int num;
+	private String sub, content, id;
+	private Date nalja;
+	
+	public void setNum(int num) {
+		this.num = num;
+	}
+	
+	public int getNum() {
+		return num;
+	}
+	
+	public void setSub(String sub) {
+		this.sub = sub;
+	}
+}

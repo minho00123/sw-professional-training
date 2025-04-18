@@ -1,0 +1,9 @@
+package com.web08.model;
+
+import java.sql.Date;
+
+public class Bbs07Bean {
+	private int num;
+	private String sub, content;
+	private Data nalja;
+}
