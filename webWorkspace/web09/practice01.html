@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            margin: 30px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 10px 0;
+            padding: 5px 20px;
+            border-left: 1px solid black;
+        }
+
+        nav a:last-child {
+            border-right: 1px solid black;
+        }
+
+        nav a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        #mainImg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            padding: 20px 0;
+            border-top: 1px solid black;
+            color: gray;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="https://kibwa.step.or.kr/upload/comp/2021000150/main_toplogo.png" alt="logo" />
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Intro</a>
+            <a href="#">BBS</a>
+            <a href="#">Login</a>
+        </nav>
+        <main>
+            <img id="mainImg" src="https://kibwa.step.or.kr/upload/banner//20230824120947814.png" alt="section image">
+        </main>
+        <footer>
+            &copy;IT여성기업인협회 Inc. All Rights Reserved.
+        </footer>
+    </div>
+</body>
+</html>
