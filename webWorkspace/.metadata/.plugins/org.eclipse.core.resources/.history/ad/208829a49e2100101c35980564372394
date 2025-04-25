@@ -1,0 +1,12 @@
+package com.web12.model;
+
+import java.sql.Date;
+
+public class Bbs05Dto {
+	private int num, cnt;
+	private String sub, content;
+	private Date nalja;
+	
+	public Bbs05Dto() {
+	}
+}

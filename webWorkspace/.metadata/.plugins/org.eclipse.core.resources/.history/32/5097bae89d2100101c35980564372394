@@ -1,0 +1,14 @@
+package com.web12.util;
+
+import java.sql.Connection;
+
+public class MyDataBase {
+	private static Connection conn;
+	
+	private MyDataBase() {}
+	
+	public static Connection getConnection() {
+		
+		return conn;
+	}
+}

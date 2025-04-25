@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <style rel="stylesheet" type="text/css">
+        header > img {
+            margin: 10px 20px;
+        }
+
+        nav > ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav > ul > li {
+            margin: 0px 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav > ul > li:hover {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: dimgrey;
+            color: whitesmoke;
+            font-size: 12px;
+        }
+    </style>
+    <script type="text/javascript">
+        const imgDiv = document.querySelector("main>div");
+        for (let i = 1; i <= 6; i++) {
+            const imgElement = document.createElement("img");
+            imgElement.src = "./imgs/b" + i + ".avif";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="http://www.kibwa.org/data/skin/default/images/da_image/hd_logo.png" alt="logo">
+    </header>
+    <nav>
+        <ul>
+            <li>HOME</li>
+            <li>INTRO</li>
+            <li>BBS</li>
+            <li>LOGIN</li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <img src="./imgs/b1.avif" alt="random image">
+        </div>
+    </main>
+    <footer>
+        <p>&copy;한국IT여성기업인협회 Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

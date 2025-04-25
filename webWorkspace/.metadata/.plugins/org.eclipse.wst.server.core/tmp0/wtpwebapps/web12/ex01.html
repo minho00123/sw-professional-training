@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var xhr, btn;
+        window.onload = function() {
+            // ajax
+            btn = document.querySelector("button");
+            btn.onclick = function() {
+                xhr = new XMLHttpRequest();
+                xhr.open("get", "intro.jsp");
+                xhr.send();
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>비동기 통신</h1>
+    <h2>ajax</h2>
+    <button>click</button>
+    <p>위 버튼은 intro.jsp를 요청합니다</p>
+</body>
+</html>

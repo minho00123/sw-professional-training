@@ -1,0 +1,7 @@
+package com.web12.model;
+
+public class Bbs05Dto {
+	private int num, cnt;
+	private String sub, content;
+	private Date nalja;
+}
