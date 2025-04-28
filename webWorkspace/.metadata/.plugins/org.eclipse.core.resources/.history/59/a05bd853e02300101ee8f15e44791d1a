@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+h1 {
+	background-image: url("http://www.kibwa.org/data/skin/default/images/da_image/hd_logo.png");
+	background-size: 100%;
+	width: 100px;
+	text-indent: -9999px;
+	display: inline-block;
+}
+
+h1+form {
+	display: inline-block;
+	
+}
+</style>
+<body>
+	<h1>한국IT여성기업인협회</h1>
+	<form action="login.jsp" method="post">
+		<label>id</label>K<input name="id" />
+		<label>pw</label><input type="password" name="pw" />
+		<button>login</button>
+	</form>
+	<hr />
+</body>
+</html>
