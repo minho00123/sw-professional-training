@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        setInterval(func01, 1000);
+      });
+
+      var su = 1;
+      function func01() {
+        var img1 = $("<img/>").attr("src", "imgs/s" + ((su % 6) + 1) + ".avif");
+        var img2 = $("<img/>").attr(
+          "src",
+          "imgs/s" + (((su + 1) % 6) + 1) + ".avif"
+        );
+        var img3 = $("<img/>").attr(
+          "src",
+          "imgs/s" + (((su + 2) % 6) + 1) + ".avif"
+        );
+        var bigImage = $("<img/>").attr(
+          "src",
+          "imgs/b" + (((su + 1) % 6) + 1) + ".avif"
+        );
+
+        $("#small-image-container").empty().append(img1, img2, img3);
+        $("#big-image").empty().append(bigImage);
+
+        su++;
+      }
+    </script>
+    <style rel="stylesheet" type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        width: 890px;
+        height: 100%;
+        border: 5px solid black;
+      }
+
+      #big-image {
+        display: flex;
+        justify-content: center;
+        width: 885px;
+        height: 550px;
+        border-bottom: 5px solid black;
+      }
+
+      #small-image-container {
+        display: flex;
+        width: 295px;
+        height: 290px;
+      }
+
+      #small-image-container > img {
+        border-right: 5px solid black;
+      }
+
+      #small-image-container > img:nth-last-child {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="big-image"></div>
+      <div id="small-image-container"></div>
+    </div>
+  </body>
+</html>
