@@ -1,0 +1,8 @@
+package com.web17.util;
+
+public class Mysql {
+
+	public static Connection getConnection() {
+		return null;
+	}
+}

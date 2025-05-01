@@ -1,0 +1,17 @@
+package com.web17.util;
+
+import java.sql.Connection;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class Mysql {
+	private static Connection conn;
+	private static String driver = Driver.class.getCanonicalName();
+	private static String url = "jdbc:mysql://localhost:33306/xe";
+	private static String user = "root";
+	private static String password = "mysql";
+	
+	public static Connection getConnection() {
+		return conn;
+	}
+}
