@@ -1,0 +1,59 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../css/frame.css">
+<style type="text/css">
+table {
+	width: 80%;
+	border-collapse: collapse;
+	margin: 10px auto 50px auto;
+}
+
+table, tr>th, tr>td {
+	border: 1px solid gray;
+}
+
+table tr>td {
+	height: 35px;
+}
+</style>
+</head>
+<body>
+	<jsp:include page="../layout/header.jsp"></jsp:include>
+	<jsp:include page="../layout/menu.jsp">
+		<jsp:param value=".." name="path" />
+	</jsp:include>
+	<h2>게시판</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>no</th>
+				<th>subject</th>
+				<th>id</th>
+				<th>nalja</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%@ page import="java.util.*, com.mvc.model.*" %>
+			<%
+				List<BbsDto> list = request.getAttribute("alist");
+				for (int i = 0; i < 5; i++) {
+			%>
+			<tr>
+				<td><%=i%></td>
+				<td><%=i%></td>
+				<td><%=i%></td>
+				<td><%=i%></td>
+			</tr>
+			<%
+				}
+			%>
+		</tbody>
+	</table>
+	<jsp:include page="../layout/footer.jsp"></jsp:include>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.mvc.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BbsDao {
+	
+	public List<BbsDto> getList() {
+		List<BbsDto> list = new ArrayList<BbsDto>();
+		String sql = "select * from bbs order by num desc";
+		
+		
+		return list;
+	}
+}

@@ -1,0 +1,41 @@
+package com.mvc.model;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mvc.util.Mysql;
+
+public class BbsDao {
+	Connection conn;
+	Statement stmt;
+	ResultSet rs;
+
+	public List<BbsDto> getList() {
+		List<BbsDto> list = new ArrayList<BbsDto>();
+		String sql = "select * from bbs order by num desc";
+		try {
+			conn = Mysql.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				list.add(new BbsDto(rs.getInt("num"), rs.getString("sub"), rs.getString("content"), rs.getString("id"),
+						rs.getDate("nalja")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return list;
+	}
+}
