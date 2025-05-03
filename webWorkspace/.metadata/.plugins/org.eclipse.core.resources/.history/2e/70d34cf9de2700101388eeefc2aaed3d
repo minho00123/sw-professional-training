@@ -1,0 +1,93 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page import="com.yourpackage.BbsDto" %> <!-- 실제 패키지로 수정 필요 -->
+<%
+    // 게시글 데이터는 컨트롤러에서 request에 담아 넘겨주는 방식으로 처리
+    BbsDto post = (BbsDto) request.getAttribute("post");
+    if (post == null) {
+%>
+    <p style="text-align:center;">존재하지 않는 게시글입니다.</p>
+    <a href="list.jsp" style="display:block; text-align:center;">목록으로</a>
+<%
+    return;
+    }
+%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%= post.getSub() %> - 게시판</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .info {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .content {
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .btn-back {
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        .btn-back a {
+            background-color: #4a90e2;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-back a:hover {
+            background-color: #3b7dc4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2><%= post.getSub() %></h2>
+
+        <div class="info">
+            작성자: <strong><%= post.getId() %></strong> |
+            날짜: <%= post.getNalja() %>
+        </div>
+
+        <div class="content">
+            <%= post.getContent() %>
+        </div>
+
+        <div class="btn-back">
+            <a href="list.jsp">← 목록으로</a>
+        </div>
+    </div>
+</body>
+</html>

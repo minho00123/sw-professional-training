@@ -1,0 +1,31 @@
+package com.mvc.model;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mvc.util.Mysql;
+
+public class BoardDao {
+	Connection conn;
+	Statement stmt;
+	ResultSet rs;
+	
+	public List<BoardDto> getList() {
+		List<BoardDto> list = new ArrayList<BoardDto>();
+		String sql = "SELECT * FROM board ORDER BY id DESC";
+		
+		try {
+			conn = Mysql.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				list.add(new BoardDto(rs.getInt("id"), rs.getString("userId"), rs.getString("title"), rs.getString("content"), rs.getDate("created_at"), rs.getDate("updated_at")));
+			}
+		}
+		
+		return list;
+	}
+}

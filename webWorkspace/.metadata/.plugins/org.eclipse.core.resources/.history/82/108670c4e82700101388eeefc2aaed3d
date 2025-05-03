@@ -1,0 +1,151 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java"%>
+<%@ page import="java.util.*, com.mvc.model.*"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>📋 JSP 게시판</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #f7f9fc;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	max-width: 900px;
+	margin: 40px auto;
+	background-color: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.search-box {
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.search-box form {
+	display: inline-block;
+}
+
+.search-box input[type="text"] {
+	padding: 7px;
+	font-size: 14px;
+	width: 200px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.search-box input[type="submit"] {
+	padding: 7px 12px;
+	font-size: 14px;
+	background-color: #4a90e2;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.search-box input[type="submit"]:hover {
+	background-color: #3b7dc4;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 14px 10px;
+	text-align: center;
+}
+
+th {
+	background-color: #4a90e2;
+	color: white;
+	font-weight: bold;
+}
+
+tr:nth-child(even) {
+	background-color: #f1f5fa;
+}
+
+tr:hover {
+	background-color: #e1ecf7;
+	transition: background-color 0.3s;
+}
+
+.write-btn {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.write-btn a {
+	display: inline-block;
+	background-color: #4a90e2;
+	color: white;
+	padding: 10px 18px;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.write-btn a:hover {
+	background-color: #3b7dc4;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h2>📋 JSP 게시판</h2>
+
+		<div class="search-box">
+			<form action="search.jsp" method="get">
+				<input type="text" name="keyword" placeholder="제목으로 검색..." /> <input
+					type="submit" value="검색" />
+			</form>
+		</div>
+
+		<table>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성자</th>
+				<th>날짜</th>
+			</tr>
+
+			<%
+				List<BoardDto> list = (List<BoardDto>) request.getAttribute("dataList");
+				for (BoardDto bean: list) {
+			%>
+			<tr>
+				<td><%=bean.getId()%></td>
+				<td style="text-align: left;"><a href="view.jsp?id=<%=bean.getId()%>"
+					style="text-decoration: none; color: #333;">게시글 제목 <%=bean.getTitle()%></a></td>
+				<td>작성자<%=bean.getUserId()%></td>
+				<td><%=bean.getCreatedAt()%></td>
+			</tr>
+			<%
+				}
+			%>
+		</table>
+
+		<div class="write-btn">
+			<a href="write.jsp">✏️ 글쓰기</a>
+		</div>
+	</div>
+</body>
+</html>
