@@ -1,0 +1,14 @@
+package com.web19.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BbsDao {
+	public BbsDao() {}
+	
+	public List<BbsDto> getList() {
+		List<BbsDto> list = new ArrayList<BbsDto>();
+		
+		return list;
+	}
+}

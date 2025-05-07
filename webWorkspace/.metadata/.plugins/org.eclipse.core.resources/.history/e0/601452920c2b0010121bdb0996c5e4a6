@@ -1,0 +1,23 @@
+package com.web19.model;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BbsDao {
+	private Connection conn;
+	
+	public BbsDao() {
+		try {
+			Class.forName("");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public List<BbsDto> getList() {
+		List<BbsDto> list = new ArrayList<BbsDto>();
+		
+		return list;
+	}
+}

@@ -1,0 +1,26 @@
+package com.web19.model;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.jdbc.Driver;
+import com.mysql.cj.jdbc.MysqlDataSource;
+
+public class BbsDao {
+	private DataSource dataSource;
+	private String driver = Driver.class.getCanonicalName();
+	
+	public BbsDao() {
+		dataSource = new MysqlDataSource();
+	}
+	
+	public List<BbsDto> getList() {
+		List<BbsDto> list = new ArrayList<BbsDto>();
+		dataSource.getConnection();
+		
+		return list;
+	}
+}

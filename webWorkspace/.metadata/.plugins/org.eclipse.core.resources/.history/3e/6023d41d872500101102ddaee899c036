@@ -1,7 +1,0 @@
-package com.web16.step01;
-
-import javax.servlet.GenericServlet;
-
-public class Ex03 extends GenericServlet {
-
-}

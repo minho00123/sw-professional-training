@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		java.util.List list = new java.util.ArrayList();
+		list.add("item1");
+		list.add("item2");
+		list.add("item3");
+		list.add("item4");
+		list.add("item5");
+		request.setAttribute("list", list);
+	%>
+	<h1>loop</h1>
+</body>
+</html>

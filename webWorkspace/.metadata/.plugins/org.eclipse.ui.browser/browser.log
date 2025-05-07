@@ -1,0 +1,8 @@
+
+5월 07, 2025 15:08:28.71 NEW SESSION
+5월 07, 2025 15:08:28.71 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 07, 2025 17:02:26.44 NEW SESSION
+5월 07, 2025 17:02:26.44 Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 07, 2025 17:04:04.54 [14148:10412:0507/170404.547:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 07, 2025 17:09:39.19 [14148:10412:0507/170939.193:ERROR:device_event_log_impl.cc(202)] [17:09:39.185] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: �슂�냼媛� �뾾�뒿�땲�떎. (0x490)

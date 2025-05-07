@@ -1,9 +1,0 @@
-package com.web16.step01;
-
-import javax.servlet.Servlet;
-
-public class Ex01 implements Servlet {
-	
-	public void func01() {}
-	
-}

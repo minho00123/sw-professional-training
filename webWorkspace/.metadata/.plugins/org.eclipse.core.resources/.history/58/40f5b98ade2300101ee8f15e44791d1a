@@ -1,8 +1,0 @@
-{"stus": [
-<%@ page import="java.sql.*" %>
-<% %>
-	{"num": 1111, "name": "user1", "kor": 91, "eng": 81, "math": 71},
-<% %>
-]}
-<%@ page language="java" contentType="application/json; charset=UTF-8"
-    pageEncoding="UTF-8"%>

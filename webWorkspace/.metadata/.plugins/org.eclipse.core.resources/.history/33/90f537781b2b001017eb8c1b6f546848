@@ -1,0 +1,33 @@
+package com.web19.model;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.jdbc.MysqlDataSource;
+
+public class UserDao {
+	private DataSource dataSource;
+	private Connection conn;
+	
+	public UserDao() {
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setUrl("jdbc:mysql://localhost:33306/xe");
+		dataSource.setUser("scott");
+		dataSource.setPassword("tiger");
+		this.dataSource = dataSource;
+	}
+	
+	public String selectOne(String id, String pw) throws SQLException {
+		String sql = "select name from xe.user where id='" + id + "' and pw='" + pw + "'"; 
+		
+		try {
+			conn = dataSource.getConnection();
+		} finally {
+			if (conn != null) conn.close();
+		}
+		
+		return null;
+	}
+}

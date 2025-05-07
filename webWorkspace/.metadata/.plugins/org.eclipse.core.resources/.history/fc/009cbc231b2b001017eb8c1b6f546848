@@ -1,0 +1,5 @@
+package com.web19.model;
+
+public class UserDao {
+
+}
