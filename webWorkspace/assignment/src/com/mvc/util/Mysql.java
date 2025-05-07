@@ -12,14 +12,13 @@ public class Mysql {
 	private static String url = "jdbc:mysql://localhost:3306/xe";
 	private static String user = "scott";
 	private static String password = "tiger";
-
-	private Mysql() {
-	}
-
+	
+	private Mysql() {}
+	
 	public static Connection getConnection() {
 		try {
 			Class.forName(driver);
-
+			
 			if (conn == null || conn.isClosed()) {
 				conn = DriverManager.getConnection(url, user, password);
 			}
@@ -28,8 +27,7 @@ public class Mysql {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+		
 		return conn;
 	}
-
 }

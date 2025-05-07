@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>✏️ 글쓰기 - JSP 게시판</title>
+<title>✏️ 글쓰기 - 게시판</title>
 <style>
 body {
 	background-color: #f7f9fc;
@@ -90,15 +90,15 @@ textarea {
 	<div class="container">
 		<h2>✏️ 새 글 작성</h2>
 
-		<form action="write.do" method="post">
+		<form action="write" method="post">
 			<div>
-				<label for="writer">작성자</label> <input type="text" id="writer"
-					name="id" required>
+				<label for="userId">작성자</label> <input type="text" id="userId"
+					name="userId" required>
 			</div>
 
 			<div>
-				<label for="subject">제목</label> <input type="text" id="subject"
-					name="sub" required>
+				<label for="title">제목</label> <input type="text" id="title"
+					name="title" required>
 			</div>
 
 			<div>

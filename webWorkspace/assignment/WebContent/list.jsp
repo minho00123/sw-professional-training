@@ -1,10 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java"%>
-<%@ page import="java.util.List"%>
-<%@ page import="com.mvc.model.*"%>
+<%@ page import="java.util.List, com.mvc.model.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>📋 JSP 게시판</title>
+<title>📋 게시판</title>
 <style>
 body {
 	background-color: #f7f9fc;
@@ -29,6 +28,28 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #4a90e2;
+    transition: color 0.3s ease;
+}
+
+td a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+td a:hover {
+    background-color: #e1ecf7;
 }
 
 th, td {
@@ -112,17 +133,16 @@ tr:hover {
 </head>
 <body>
 	<div class="container">
-		<h2>📋 JSP 게시판</h2>
+		<h2>📋 게시판</h2>
 
 		<div class="search-box">
-			<!-- 검색 폼 -->
 			<form method="get" action="<%=request.getContextPath()%>/list">
 				<input type="text" name="keyword"
 					value="<%=request.getAttribute("keyword") != null ? request.getAttribute("keyword") : ""%>"
 					placeholder="검색어 입력"> <input type="submit" value="검색">
 			</form>
 			<div class="write-btn">
-				<a href="write.jsp">✏️ 글쓰기</a>
+				<a href="write">✏️ 글쓰기</a>
 			</div>
 		</div>
 
@@ -134,7 +154,7 @@ tr:hover {
 				<th>작성일</th>
 			</tr>
 			<%
-				List<BoardDto> boardList = (List<BoardDto>) request.getAttribute("dataList");
+				List<BoardDto> boardList = (List<BoardDto>) request.getAttribute("boardList");
 				int currentPage = (Integer) request.getAttribute("currentPage");
 				int totalPages = (Integer) request.getAttribute("totalPages");
 			%>
@@ -143,8 +163,21 @@ tr:hover {
 			%>
 			<tr>
 				<td><%=board.getId()%></td>
-				<td style="text-align: left;"><a
-					href="detail.jsp?id=<%=board.getId()%>"><%=board.getTitle()%></a></td>
+				<td style="text-align: left;">
+					<a href="detail?id=<%=board.getId()%>">
+						<%
+							int depth = board.getDepth();
+						
+							for (int i = 0; i < depth; i++) {
+								out.print("&nbsp;&nbsp;&nbsp;&nbsp;");
+							}
+							if (depth > 0) {
+								out.print("↳ ");
+							}
+						%>
+						<%=board.getTitle()%>
+					</a>
+				</td>
 				<td><%=board.getUserId()%></td>
 				<td><%=board.getCreatedAt()%></td>
 			</tr>
@@ -155,47 +188,43 @@ tr:hover {
 
 		<div class="pagination">
 			<%
-				int prevPage = currentPage - 1 > 0 ? currentPage - 1 : 1;
+				int prevPage = currentPage - 1 > 0 ? currentPage - 1: 1;
 				int nextPage = currentPage + 1 <= totalPages ? currentPage + 1 : totalPages;
-
+				
 				int pageGroupSize = 10;
 				int startPage = ((currentPage - 1) / pageGroupSize) * pageGroupSize + 1;
 				int endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
-
+				
 				int prevGroup = startPage - 1 > 0 ? startPage - 1 : 1;
 				int nextGroup = endPage + 1 <= totalPages ? endPage + 1 : totalPages;
 			%>
-
+			
 			<%
 				if (startPage > 1) {
 			%>
-			<a class="arrow"
-				href="?page=<%=prevGroup%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>">&lt;</a>
+			<a class="arrow" href="?page=<%=prevGroup%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>">&lt;</a>
 			<%
 				}
 			%>
-
+			
 			<%
 				for (int i = startPage; i <= endPage; i++) {
 					if (i == currentPage) {
 			%>
-			<a class="active"
-				href="?page=<%=i%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>"><%=i%></a>
+			<a class="active" href="?page=<%=i%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>"><%=i%></a>
 			<%
-				} else {
+					} else {
 			%>
-			<a
-				href="?page=<%=i%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>"><%=i%></a>
+			<a href="?page=<%=i%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>"><%=i%></a>
 			<%
-				}
+					}
 				}
 			%>
-
+			
 			<%
 				if (endPage < totalPages) {
 			%>
-			<a class="arrow"
-				href="?page=<%=nextGroup%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>">&gt;</a>
+			<a class="arrow" href="?page=<%=nextGroup%>&keyword=<%=request.getParameter("keyword") != null ? request.getParameter("keyword") : ""%>">&gt;</a>
 			<%
 				}
 			%>

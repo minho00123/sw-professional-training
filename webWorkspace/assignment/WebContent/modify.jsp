@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>📋 상세 게시판</title>
+<title>📋 수정 게시판</title>
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
@@ -39,11 +39,18 @@ h2 {
 	margin-bottom: 20px;
 }
 
-.content {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #333;
-	margin-bottom: 30px;
+textarea,
+input[type="text"] {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+textarea {
+	height: 150px;
 }
 
 .btn-group {
@@ -72,29 +79,28 @@ h2 {
 		BoardDto bean = (BoardDto) request.getAttribute("bean");
 	%>
 	<div class="container">
-		<h2><%=bean.getTitle()%></h2>
+		<h2>게시글 수정</h2>
 
 		<div class="info">
 			작성자: <strong><%=bean.getUserId()%></strong> &nbsp;|&nbsp; 날짜:
 			<%=bean.getCreatedAt()%>
 		</div>
 
-		<div class="content">
-			<%=bean.getContent()%>
-		</div>
+		<form action="<%=request.getContextPath()%>/modify" method="POST">
+			<input type="hidden" name="id" value="<%=bean.getId()%>">
+			
+			<label for="title">제목</label>
+			<input type="text" name="title" id="title" value="<%=bean.getTitle()%>" required>
 
-		<div class="btn-group">
-			<a href="<%=request.getContextPath()%>/list">← 목록으로</a>
+			<label for="content">내용</label>
+			<textarea name="content" id="content" required><%=bean.getContent()%></textarea>
 
-			 <a href="<%=request.getContextPath()%>/modify?id=<%=bean.getId()%>">✏️ 수정</a>
+			<div class="btn-group">
+				<button type="submit">✏️ 수정 완료</button>
+				<a href="<%=request.getContextPath()%>/detail?id=<%=bean.getId()%>">← 취소</a>
+			</div>
+		</form>
 
-			<form action="<%=request.getContextPath()%>/delete" method="POST" style="display:inline;">
-				<input type="hidden" name="id" value="<%=bean.getId()%>">
-				<button type="submit">🗑️ 삭제</button>
-			</form>
-
-			<a href="<%=request.getContextPath()%>/reply?groupId=<%=bean.getGroupId()%>&orderInGroup=<%=bean.getOrderInGroup()%>&depth=<%=bean.getDepth()%>">↪️ 답글 작성</a>
-		</div>
 	</div>
 </body>
 </html>
