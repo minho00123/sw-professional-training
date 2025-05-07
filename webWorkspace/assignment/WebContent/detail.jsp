@@ -1,10 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java"%>
-<%@ page import="com.mvc.model.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>📋 상세 게시판</title>
+<title><%="제목"%> - 게시판</title>
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
 	rel="stylesheet">
@@ -42,58 +41,44 @@ h2 {
 .content {
 	font-size: 16px;
 	line-height: 1.6;
+	white-space: pre-wrap;
 	color: #333;
 	margin-bottom: 30px;
 }
 
-.btn-group {
+.btn-back {
 	text-align: right;
 }
 
-.btn-group button,
-.btn-group a {
+.btn-back a {
 	background-color: #4a90e2;
 	color: white;
 	padding: 10px 18px;
 	border-radius: 6px;
 	text-decoration: none;
 	font-weight: bold;
-	margin-left: 10px;
 }
 
-.btn-group button:hover,
-.btn-group a:hover {
+.btn-back a:hover {
 	background-color: #3b7dc4;
 }
 </style>
 </head>
 <body>
-	<%
-		BoardDto bean = (BoardDto) request.getAttribute("bean");
-	%>
 	<div class="container">
-		<h2><%=bean.getTitle()%></h2>
+		<h2><%="제목"%></h2>
 
 		<div class="info">
-			작성자: <strong><%=bean.getUserId()%></strong> &nbsp;|&nbsp; 날짜:
-			<%=bean.getCreatedAt()%>
+			작성자: <strong><%="아이디"%></strong> &nbsp;|&nbsp; 날짜:
+			<%="날짜"%>
 		</div>
 
 		<div class="content">
-			<%=bean.getContent()%>
+			<%="내용"%>
 		</div>
 
-		<div class="btn-group">
+		<div class="btn-back">
 			<a href="<%=request.getContextPath()%>/list">← 목록으로</a>
-
-			 <a href="<%=request.getContextPath()%>/modify?id=<%=bean.getId()%>">✏️ 수정</a>
-
-			<form action="<%=request.getContextPath()%>/delete" method="POST" style="display:inline;">
-				<input type="hidden" name="id" value="<%=bean.getId()%>">
-				<button type="submit">🗑️ 삭제</button>
-			</form>
-
-			<a href="<%=request.getContextPath()%>/reply?groupId=<%=bean.getGroupId()%>&orderInGroup=<%=bean.getOrderInGroup()%>&depth=<%=bean.getDepth()%>">↪️ 답글 작성</a>
 		</div>
 	</div>
 </body>

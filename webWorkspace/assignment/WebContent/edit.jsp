@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>✏️ 글쓰기 - JSP 게시판</title>
+<title>✏️ 게시글 수정</title>
 <style>
 body {
 	background-color: #f7f9fc;
@@ -35,7 +35,6 @@ form {
 
 label {
 	font-weight: bold;
-	margin-bottom: 5px;
 }
 
 input[type="text"], textarea {
@@ -49,6 +48,10 @@ input[type="text"], textarea {
 textarea {
 	resize: vertical;
 	min-height: 200px;
+}
+
+input[readonly] {
+	background-color: #eee;
 }
 
 .buttons {
@@ -88,26 +91,29 @@ textarea {
 </head>
 <body>
 	<div class="container">
-		<h2>✏️ 새 글 작성</h2>
+		<h2>✏️ 게시글 수정</h2>
 
-		<form action="write.do" method="post">
+		<form action="edit.do" method="post">
+			<!-- 게시글 번호(hidden) -->
+			<input type="hidden" name="num" value="<%="넘버"%>">
+
 			<div>
 				<label for="writer">작성자</label> <input type="text" id="writer"
-					name="id" required>
+					name="id" value="<%="아이디"%>" readonly>
 			</div>
 
 			<div>
 				<label for="subject">제목</label> <input type="text" id="subject"
-					name="sub" required>
+					name="sub" value="<%="제목"%>" required>
 			</div>
 
 			<div>
 				<label for="content">내용</label>
-				<textarea id="content" name="content" required></textarea>
+				<textarea id="content" name="content" required><%="내용"%></textarea>
 			</div>
 
 			<div class="buttons">
-				<input type="submit" class="submit-btn" value="등록"> <a
+				<input type="submit" class="submit-btn" value="수정 완료"> <a
 					href="<%=request.getContextPath()%>/list" class="cancel-btn">취소</a>
 			</div>
 		</form>

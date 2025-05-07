@@ -4,28 +4,21 @@ import java.sql.Date;
 
 public class BoardDto {
 	private int id;
+	private String userId;
 	private String title;
 	private String content;
-	private String userId;
 	private Date createdAt;
-	private int groupId;
-	private int orderInGroup;
-	private int depth;
+	private Date updatedAt;
+	private int parentId;
 
-	public BoardDto() {
-	}
-
-	public BoardDto(int id, String title, String content, String userId, Date createdAt, int groupId, int orderInGroup,
-			int depth) {
+	public BoardDto(int id, String userId, String title, String content, Date createdAt, Date updatedAt) {
 		super();
 		this.id = id;
+		this.userId = userId;
 		this.title = title;
 		this.content = content;
-		this.userId = userId;
 		this.createdAt = createdAt;
-		this.groupId = groupId;
-		this.orderInGroup = orderInGroup;
-		this.depth = depth;
+		this.updatedAt = updatedAt;
 	}
 
 	public int getId() {
@@ -34,6 +27,14 @@ public class BoardDto {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getTitle() {
@@ -52,14 +53,6 @@ public class BoardDto {
 		this.content = content;
 	}
 
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -68,35 +61,17 @@ public class BoardDto {
 		this.createdAt = createdAt;
 	}
 
-	public int getGroupId() {
-		return groupId;
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
 
-	public void setGroupId(int groupId) {
-		this.groupId = groupId;
-	}
-
-	public int getOrderInGroup() {
-		return orderInGroup;
-	}
-
-	public void setOrderInGroup(int orderInGroup) {
-		this.orderInGroup = orderInGroup;
-	}
-
-	public int getDepth() {
-		return depth;
-	}
-
-	public void setDepth(int depth) {
-		this.depth = depth;
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
 	@Override
 	public String toString() {
-		return "BoardDto [id=" + id + ", title=" + title + ", content=" + content + ", userId=" + userId
-				+ ", createdAt=" + createdAt + ", groupId=" + groupId + ", orderInGroup=" + orderInGroup + ", depth="
-				+ depth + "]";
+		return "BoardDto [id=" + id + ", userId=" + userId + ", title=" + title + ", content=" + content
+				+ ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
 	}
-
 }

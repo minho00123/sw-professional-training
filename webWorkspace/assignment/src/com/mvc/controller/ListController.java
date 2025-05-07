@@ -13,11 +13,10 @@ import com.mvc.model.BoardDao;
 import com.mvc.model.BoardDto;
 
 public class ListController extends HttpServlet {
-
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int currentPage = 1;
-		String keyword = req.getParameter("keyword") != null ? req.getParameter("keyword") : "";
+		String keyword = req.getParameter("keyword") != null ? req.getParameter("keyword").trim() : "";
 
 		if (req.getParameter("page") != null) {
 			currentPage = Integer.parseInt(req.getParameter("page"));
@@ -25,11 +24,11 @@ public class ListController extends HttpServlet {
 
 		BoardDao dao = new BoardDao();
 		List<BoardDto> list = dao.getList(currentPage, keyword);
-
+		System.out.println("list = " + list);
 		int totalCount = dao.getTotalCount(keyword);
 		int totalPages = (int) Math.ceil(totalCount / 10.0);
 
-		req.setAttribute("boardList", list);
+		req.setAttribute("dataList", list);
 		req.setAttribute("currentPage", currentPage);
 		req.setAttribute("totalPages", totalPages);
 		req.setAttribute("keyword", keyword);
