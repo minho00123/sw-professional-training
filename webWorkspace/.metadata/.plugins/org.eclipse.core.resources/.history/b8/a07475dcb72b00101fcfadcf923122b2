@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<div class="container">
+	<div id="header">
+		<h1>logo</h1>
+	</div>
+	<div id="menu" class="bg-primary text-center">
+		<a href="${root }index.do">home</a>
+		<a href="${root }intro.do">intro</a>
+		<a href="${root }bbs/list.do">bbs</a>
+		<a href="${root }login/signin.do">login</a>
+	</div>
+	<div id="content">
+		<!-- begin -->

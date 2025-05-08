@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<c:url var="root" value="/"></c:url>
+<%@ include file="layout/header.jspf"%>
+</head>
+<body>
+	<%@ include file="layout/menu.jspf"%>
+	<h2>index page</h2>
+	<%@ include file="layout/footer.jspf"%> <!-- 소스코드를 가져다가 붙이면 동작 -->
+	<!-- <jsp:include page="layout/footer.jspf"></jsp:include> <!-- 독립적으로 jsp마다 컴파일해서 servlet을 만든다. --> -->
+</body>
+</html>

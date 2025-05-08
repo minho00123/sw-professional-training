@@ -1,0 +1,8 @@
+package com.web20.controller;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet(value = "/checkid.do")
+public class CheckController {
+
+}

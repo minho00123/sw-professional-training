@@ -1,0 +1,20 @@
+package com.web20.model;
+
+import java.util.logging.Logger;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.jdbc.MysqlDataSource;
+
+public class UserDao {
+	Logger logger = Logger.getLogger(this.getClass().getCanonicalName());
+	DataSource dataSource;
+	
+	public UserDao() {
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setUrl("jdbc:mysql://localhost:33306/xe");
+		dataSource.setUser("scott");
+		dataSource.setPassword("tiger");
+		this.dataSource = dataSource;
+	}
+}

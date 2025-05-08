@@ -1,0 +1,9 @@
+package com.web20.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet(value = "/bbs/detail.do")
+public class DetailController extends HttpServlet {
+
+}

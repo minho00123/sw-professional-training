@@ -1,0 +1,7 @@
+package com.web20.model;
+
+import javax.sql.DataSource;
+
+public class BbsDto {
+	DataSource dataSource;
+}
