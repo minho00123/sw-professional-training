@@ -1,0 +1,18 @@
+package com.my.model;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+public class BbsDao {
+	DataSource dataSource;
+	
+	public BbsDao() {
+		try {
+			new InitialContext();
+		} catch (NamingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

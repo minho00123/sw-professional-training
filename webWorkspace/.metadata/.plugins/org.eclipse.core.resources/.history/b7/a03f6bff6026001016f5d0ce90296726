@@ -1,7 +1,0 @@
-package com.web17.json;
-
-import javax.servlet.http.HttpServlet;
-
-public class BbsOneJson extends HttpServlet {
-
-}
