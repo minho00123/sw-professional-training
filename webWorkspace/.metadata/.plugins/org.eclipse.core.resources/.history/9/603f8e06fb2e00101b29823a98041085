@@ -1,0 +1,24 @@
+package com.my.model;
+
+import static org.junit.Assert.*;
+
+import java.sql.SQLException;
+
+import org.junit.Test;
+
+public class DeptDaoTest {
+
+	@Test
+	public void testSelectAll() throws SQLException {
+		DeptDao dao = new DeptDao();
+		assertNotNull(dao.selectAll());
+		assertNotSame(0, dao.selectAll().size());
+//		assertTrue(dao.selectAll().size() > 0);
+	}
+	
+	@Test
+	public void testSelectOne() {
+		
+	}
+
+}

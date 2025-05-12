@@ -55,12 +55,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.my.web23"/>
 			<item value="com.my.web22"/>
 		</list>
 		<list key="groupId">
 			<item value="com.my"/>
 		</list>
 		<list key="artifactId">
+			<item value="web23"/>
 			<item value="web22"/>
 		</list>
 		<list key="projectNameTemplate">

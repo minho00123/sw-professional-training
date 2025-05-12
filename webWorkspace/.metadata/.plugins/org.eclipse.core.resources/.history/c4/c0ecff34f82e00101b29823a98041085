@@ -1,0 +1,6 @@
+package com.my.model;
+
+public class DeptDto {
+	private int deptno;
+	private String dname, loc;
+}

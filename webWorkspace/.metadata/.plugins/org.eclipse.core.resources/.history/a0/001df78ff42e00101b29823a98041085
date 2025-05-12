@@ -1,0 +1,15 @@
+package com.my.model;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import org.junit.Test;
+
+public class MyDataTest {
+
+	@Test
+	public void testGetConnection() throws SQLException {
+		Connection conn = MyData.getConnection();
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.my.model;
+
+import java.sql.Connection;
+
+import javax.sql.DataSource;
+
+public class MyData {
+	private static Connection conn;
+	
+	public Connection getConnection() {
+		
+	}
+}

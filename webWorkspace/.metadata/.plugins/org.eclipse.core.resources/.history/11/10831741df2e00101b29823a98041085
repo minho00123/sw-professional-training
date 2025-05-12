@@ -1,0 +1,88 @@
+package com.myframework;
+
+import java.io.IOException;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.my.controller.IndexController;
+import com.my.controller.InsertController;
+import com.my.controller.ListController;
+import com.my.controller.MainController;
+
+public class FrontController extends HttpServlet {
+	Logger logger = Logger.getLogger(this.getClass().getCanonicalName());
+
+	protected void doDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		logger.info(req.getRequestURL().toString());
+		logger.info(req.getContextPath());
+		String url = req.getRequestURI();
+		url = url.replace(req.getContextPath(), "");
+		String info = null;
+		Controller controller = null;
+		if (url.equals("/index")) {
+//			controller = new IndexController();
+			try {
+				Class info = Class.forName("com.my.controller.IndexController");
+				controller = (Controller) info.newInstance();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
+		} else if (url.equals("/main")) {
+//			controller = new MainController();
+			try {
+				Class info = Class.forName("com.my.controller.MainController");
+				controller = (Controller) info.newInstance();
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
+		} else if (url.equals("/bbs/list")) {
+			controller = new ListController();
+		} else if (url.equals("/bbs/insert")) {
+			controller = new InsertController();
+		}
+		
+		try {
+			Class clz = Class.forName(info);
+			controller = (Controller) clz.newInstance();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+
+		String result = controller.execute(req, resp);
+		if (result.startsWith("redirect:")) {
+			result = result.replace("redirect:", "");
+			resp.sendRedirect(result);
+		} else {
+			String prefix = "/WEB-INF/views/";
+			String suffix = ".jsp";
+			String viewName = prefix + result + suffix;
+			req.getRequestDispatcher(viewName).forward(req, resp);
+		}
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doDo(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doDo(req, resp);
+	}
+}

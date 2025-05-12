@@ -1,0 +1,46 @@
+package com.myframework;
+
+import java.io.IOException;
+import java.util.logging.Logger;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.my.controller.IndexController;
+import com.my.controller.ListController;
+import com.my.controller.MainController;
+
+public class FrontController extends HttpServlet {
+	Logger logger = Logger.getLogger(this.getClass().getCanonicalName());
+
+	protected void doDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		logger.info(req.getRequestURL().toString());
+		logger.info(req.getContextPath());
+		String url = req.getRequestURI();
+		url = url.replace(req.getContextPath(), "");
+		Controller controller = null;
+		if (url.equals("/index")) {
+			controller = new IndexController();
+		} else if (url.equals("/main")) {
+			controller = new MainController();
+		} else if (url.equals("/bbs/list")) {
+			controller = new ListController();
+		}
+
+		String viewName += "/WEB-INF/views/" controller.execute(req, resp) + ".jsp";
+		
+		req.getRequestDispatcher(viewName).forward(req, resp);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doDo(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doDo(req, resp);
+	}
+}

@@ -1,0 +1,10 @@
+package com.myframework;
+
+import java.sql.Connection;
+
+public class JdbcTemplate {
+	Connection conn;
+	
+	public JdbcTemplate() {
+	}
+}
