@@ -1,0 +1,70 @@
+package com.myframework;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.my.controller.AddController;
+import com.my.controller.IndexController;
+import com.my.controller.InsertController;
+import com.my.controller.ListController;
+
+public class DispatcherServlet extends HttpServlet {
+	Map<String, Controller> handler = new HashMap<>();
+
+	@Override
+	public void init() throws ServletException {
+		Map<String, String> infoMap = new HashMap();
+		
+		try {
+			handler.put("/index", IndexController.class.newInstance());
+			handler.put("/bbs/list", ListController.class.newInstance());
+			handler.put("/bbs/add", AddController.class.newInstance());
+			handler.put("/bbs/insert", InsertController.class.newInstance());
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void doDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String path = req.getRequestURI();
+		path = path.substring(req.getContextPath().length());
+		Controller controller = handler.get(path);
+		if (controller == null) {
+			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return;
+		}
+		String info = controller.execute(req);
+		if (info == null) {
+			return;
+		}
+
+		if (info.startsWith("redirect:")) {
+			String url = info.substring("redirect:".length());
+			resp.sendRedirect(url);
+			return;
+		}
+
+		String prefix = "/WEB-INF/views/";
+		String suffix = ".jsp";
+		String viewName = prefix + info + suffix;
+		req.getRequestDispatcher(viewName).forward(req, resp);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doDo(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doDo(req, resp);
+	}
+}

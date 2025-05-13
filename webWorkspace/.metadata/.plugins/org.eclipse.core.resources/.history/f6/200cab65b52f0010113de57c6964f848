@@ -1,0 +1,10 @@
+package com.myframework;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.my.model.DeptDto;
+
+public interface RowMapper {
+	Object rowMap(ResultSet rs) throws SQLException;
+}

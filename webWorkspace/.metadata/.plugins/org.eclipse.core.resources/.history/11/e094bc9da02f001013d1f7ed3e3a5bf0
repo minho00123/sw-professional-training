@@ -1,0 +1,29 @@
+package com.my.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DeptDao {
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	String url = "jdbc:mysql://localhost:33306/xe";
+	String user = "scott";
+	String password = "tiger";
+	
+	public List selectAll() throws SQLException {
+		List list = new ArrayList();
+		
+		try {
+			
+		} finally {
+			if (conn != null) conn.close();
+		}
+		
+		return list;
+	}
+}

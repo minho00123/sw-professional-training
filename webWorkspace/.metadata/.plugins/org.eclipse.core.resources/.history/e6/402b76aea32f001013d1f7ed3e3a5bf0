@@ -1,0 +1,8 @@
+package com.myframework;
+
+public class JdbcTemplate {
+
+	public int executeUpdate(String sql) {
+		
+	}
+}

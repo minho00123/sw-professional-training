@@ -1,0 +1,6 @@
+## mysql docker container
+
+### create container
+```
+docker run -it -d --network net01 --name mysql8 -p 33306:3306 -v D:\webWorkspace\web24\data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=mysql -e MYSQL_DATABASE=xe -e MYSQL_USER=scott -e MYSQL_PASSWORD=tiger mysql:lt
+```

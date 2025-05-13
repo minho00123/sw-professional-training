@@ -1,0 +1,20 @@
+package com.my;
+
+public class App {
+
+	public static void main(String[] args) {
+//		Server server = new Server(8080);
+//		WebAppContext ctxt = new WebAppContext();
+//		ctxt.setContextPath("/");
+//		File f = new File("src\\main\\webapp");
+//		Resource base = new FileResource(f);
+//		ctxt.setBaseResource(base);
+//		server.setHandler(ctxt);
+//		try {
+//			server.start();
+//		} catch (Exception e) {
+//			System.out.println("서버구동 실패");
+//		}
+	}
+
+}

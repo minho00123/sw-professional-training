@@ -1,0 +1,43 @@
+package com.my.model;
+
+import static org.junit.Assert.*;
+
+import java.sql.SQLException;
+import java.util.logging.Logger;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class DeptDaoTest {
+	static Logger logger;
+	DeptDao dao;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		logger = Logger.getLogger(DeptDaoTest.class.getCanonicalName());
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		dao = new DeptDao();
+	}
+
+	@Test
+	public void testSelectAll() throws SQLException {
+		for (Object obj: dao.selectAll()) {
+			System.out.println(obj);
+		}
+	}
+
+	@Test
+	public void testSelectOne() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testInsertOne() {
+		fail("Not yet implemented");
+	}
+
+}

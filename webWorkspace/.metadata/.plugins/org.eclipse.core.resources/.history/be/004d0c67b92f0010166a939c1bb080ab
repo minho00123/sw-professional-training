@@ -1,0 +1,53 @@
+package com.my.model;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.myframework.JdbcTemplate;
+import com.myframework.RowMapper;
+
+public class DeptDao {
+	JdbcTemplate template = new JdbcTemplate();
+	RowMapper rowMapper = new RowMapper() {
+		@Override
+		public Object rowMap(ResultSet rs) throws SQLException {
+			return new DeptDto(rs.getInt("deptno"), rs.getString("dname"), rs.getString("loc"));
+		}
+	};
+//	Connection conn;
+//	PreparedStatement pstmt;
+//	ResultSet rs;
+//	String url="jdbc:mysql://localhost:33306/xe";
+//	String user="scott";
+//	String password="tiger";
+
+	public List selectAll() throws SQLException {
+		String sql = "select * from dept";
+		return template.queryForList(sql, rowMapper);
+	}
+
+	public DeptDto selectOne(int pk) throws SQLException {
+		String sql = "select * from dept where deptno=?";
+		return (DeptDto) template.queryForObject(sql, rowMapper, pk);
+	}
+
+	public int insertOne(DeptDto bean) throws SQLException {
+		String sql = "insert into dept values (?,?,?)";
+		return template.executeUpdate(sql, bean.getDeptno(), bean.getDname(), bean.getLoc());
+	}
+
+	public int updateOne(DeptDto bean) throws SQLException {
+		String sql = "update dept set dname=?,loc=? where deptno=?";
+		return template.executeUpdate(sql, bean.getDname(), bean.getLoc(), bean.getDeptno());
+	}
+
+	public int deleteOne(int pk) throws SQLException {
+		String sql = "delete from dept where deptno=?";
+		return template.executeUpdate(sql, pk);
+	}
+}

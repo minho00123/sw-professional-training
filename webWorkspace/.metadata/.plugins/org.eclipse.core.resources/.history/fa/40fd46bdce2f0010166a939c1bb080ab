@@ -1,0 +1,82 @@
+package com.myframework;
+
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.my.controller.AddController;
+import com.my.controller.IndexController;
+import com.my.controller.InsertController;
+import com.my.controller.ListController;
+
+public class DispatcherServlet extends HttpServlet {
+	Map<String, Controller> handler = new HashMap<>();
+
+	@Override
+	public void init() throws ServletException {
+		Map<String, String> infoMap = new HashMap<>();
+		Properties props = new Properties();
+		props.put("/index", IndexController.class.getCanonicalName());
+		props.put("/bbs/list", ListController.class.getCanonicalName());
+		props.put("/bbs/add", AddController.class.getCanonicalName());
+		props.put("/bbs/insert", InsertController.class.getCanonicalName());
+
+		Enumeration<Object> keys = props.keys();
+
+		try {
+			while (keys.hasMoreElements()) {
+				String key = (String) keys.nextElement();
+				Controller controller = (Controller) Class.forName(info).newInstance();
+				handler.put(key, controller);
+			}
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void doDo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String path = req.getRequestURI();
+		path = path.substring(req.getContextPath().length());
+		Controller controller = handler.get(path);
+		if (controller == null) {
+			resp.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return;
+		}
+		String info = controller.execute(req);
+		if (info == null) {
+			return;
+		}
+
+		if (info.startsWith("redirect:")) {
+			String url = info.substring("redirect:".length());
+			resp.sendRedirect(url);
+			return;
+		}
+
+		String prefix = "/WEB-INF/views/";
+		String suffix = ".jsp";
+		String viewName = prefix + info + suffix;
+		req.getRequestDispatcher(viewName).forward(req, resp);
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doDo(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		this.doDo(req, resp);
+	}
+}

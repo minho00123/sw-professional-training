@@ -1,0 +1,14 @@
+use xe;
+-- dept
+drop table dept;
+create table dept(
+	deptno int primary key,
+	dname varchar(6) not null,
+	loc varchar(6)
+);
+-- dummy data
+insert into dept values (1111, 'test', 'test');
+insert into dept values (2222, 'test', 'test');
+insert into dept values (3333, 'test', 'test');
+insert into dept values (4444, 'test', 'test');
+commit;

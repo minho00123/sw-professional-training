@@ -1,0 +1,17 @@
+package com.my;
+
+import org.eclipse.jetty.server.Server;
+
+public class App {
+
+	public static void main(String[] args) {
+		Server server = new Server(8080);
+		
+		try {
+			server.start();
+		} catch (Exception e) {
+		System.out.println(:"서버구동 실패");
+		}
+	}
+
+}

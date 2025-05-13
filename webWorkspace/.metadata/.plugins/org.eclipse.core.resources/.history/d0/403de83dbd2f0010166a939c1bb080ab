@@ -1,0 +1,27 @@
+package com.my;
+
+import java.io.File;
+
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.util.resource.FileResource;
+import org.eclipse.jetty.util.resource.Resource;
+import org.eclipse.jetty.webapp.WebAppContext;
+
+public class App {
+
+	public static void main(String[] args) {
+		Server server = new Server(8080);
+		WebAppContext ctxt = new WebAppContext();
+		ctxt.setContextPath("/");
+		File f = new File("D:\\webWorkspace\\web24\\src\\main\\webapp");
+		Resource base = new FileResource(f);
+		ctxt.setBaseResource(base);
+		server.setHandler(ctxt);
+		try {
+			server.start();
+		} catch (Exception e) {
+			System.out.println("서버구동 실패");
+		}
+	}
+
+}

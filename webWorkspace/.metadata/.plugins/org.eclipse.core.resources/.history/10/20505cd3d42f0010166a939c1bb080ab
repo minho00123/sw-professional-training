@@ -1,0 +1,13 @@
+package com.my.controller;
+
+import com.myframework.Controller;
+import com.myframework.HttpServletRequest;
+
+public class IndexController implements Controller {
+
+	@Override
+	public String execute(HttpServletRequest req) {
+		return "index";
+	}
+
+}
