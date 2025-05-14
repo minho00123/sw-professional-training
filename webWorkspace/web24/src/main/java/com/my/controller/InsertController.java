@@ -9,16 +9,16 @@ import com.my.model.DeptDto;
 import com.myframework.Controller;
 
 public class InsertController implements Controller {
-	DeptDao dao = new DeptDao();
+	DeptDao dao=new DeptDao();
 
 	@Override
 	public String execute(HttpServletRequest req) {
-
-		DeptDto bean = new DeptDto(
-				Integer.parseInt(req.getParameter("deptno")),
-				req.getParameter("dname"),
-				req.getParameter("loc")
-			);
+		
+		DeptDto bean=new DeptDto(
+				Integer.parseInt(req.getParameter("deptno"))
+				,req.getParameter("dname")
+				,req.getParameter("loc")
+				);
 		try {
 			dao.insertOne(bean);
 		} catch (SQLException e) {
@@ -28,3 +28,15 @@ public class InsertController implements Controller {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

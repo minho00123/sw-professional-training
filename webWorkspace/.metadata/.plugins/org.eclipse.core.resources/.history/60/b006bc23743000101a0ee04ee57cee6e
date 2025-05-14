@@ -1,0 +1,49 @@
+package com.dept.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import com.mysql.cj.jdbc.MysqlDataSource;
+
+public class DeptDao {
+	DataSource dataSource;
+	
+	public DeptDao() {
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setURL("jdbc:mysql://localhost:33306/xe");
+		dataSource.setUser("scott");
+		dataSource.setPassword("tiger");
+		this.dataSource = dataSource;
+	}
+	
+	
+	public List<DeptDto> selectAll() throws SQLException {
+		String sql = "select * from dept order by deptno";
+		List<DeptDto> list = new ArrayList<>();
+		
+		try(
+				Connection conn = dataSource.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				ResultSet rs = pstmt.executeQuery();
+				) {
+			while (rs.next()) {
+				list.add(new DeptDto(
+							rs.getInt(1),
+							rs.getString(2),
+							rs.getString(3)
+						));
+			}
+			
+		} finally {
+			
+		}
+		
+		return list;
+	}
+}

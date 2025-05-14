@@ -1,0 +1,13 @@
+package com.dept.model;
+
+import org.springframework.dao.support.DaoSupport;
+
+public class DeptDao2 extends DaoSupport {
+
+	@Override
+	protected void checkDaoConfig() throws IllegalArgumentException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

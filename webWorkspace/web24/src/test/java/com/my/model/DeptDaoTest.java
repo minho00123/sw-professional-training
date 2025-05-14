@@ -21,26 +21,26 @@ public class DeptDaoTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		logger = Logger.getLogger(DeptDaoTest.class.getCanonicalName());
-		target = new DeptDto(1111, "test", "test");
+		logger=Logger.getLogger(DeptDaoTest.class.getCanonicalName());
+		target=new DeptDto(1111,"test","test");
 	}
 
 	@Before
 	public void setUp() throws Exception {
-		dao = new DeptDao();
+		dao=new DeptDao();
 	}
 
 	@Test
 	public void test1SelectAll() throws SQLException {
-		for (Object obj : dao.selectAll()) {
+		for(Object obj:dao.selectAll()){
 			logger.info(obj.toString());
 		}
-		assertTrue(dao.selectAll().size() > 0);
+		assertTrue(dao.selectAll().size()>0);
 	}
 
 	@Test
 	public void test2SelectOne() throws SQLException {
-		Object obj = dao.selectOne(target.getDeptno());
+		Object obj=dao.selectOne(target.getDeptno());
 		assertEquals(target, obj);
 	}
 
@@ -56,10 +56,18 @@ public class DeptDaoTest {
 		target.setDname("ÇÑ±Û");
 		assertSame(1, dao.updateOne(target));
 	}
-
+	
 	@Test
 	public void test5DeleteOne() throws SQLException {
 		target.setDeptno(6666);
 		assertSame(1, dao.deleteOne(target.getDeptno()));
 	}
 }
+
+
+
+
+
+
+
+

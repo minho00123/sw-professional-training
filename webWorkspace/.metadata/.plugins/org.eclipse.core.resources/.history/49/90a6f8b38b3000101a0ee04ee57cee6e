@@ -1,0 +1,15 @@
+package com.dept.model;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+public class DeptDao2 extends JdbcDaoSupport {
+
+	public List<DeptDto> selectAll() throws SQLException {}
+	
+	public void insertOne(DeptDto bean) throws SQLException {}
+	
+	public DeptDto selectOne(int pk) throws SQLException {}
+}

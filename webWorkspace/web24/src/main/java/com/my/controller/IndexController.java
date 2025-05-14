@@ -8,6 +8,7 @@ public class IndexController implements Controller {
 
 	@Override
 	public String execute(HttpServletRequest req) {
+		System.out.println("index c");
 		return "index";
 	}
 
