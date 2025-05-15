@@ -1,0 +1,11 @@
+package com.my;
+
+import com.my.service.Service01;
+
+public class App {
+
+	public static void main(String[] args) {
+		Service01 service = new Service01();
+	}
+
+}

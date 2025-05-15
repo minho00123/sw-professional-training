@@ -1,0 +1,29 @@
+package com.my.model;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+public class DeptDaoImpl extends JdbcDaoSupport {
+
+	Logger log = Logger.getLogger(this.getClass());
+
+	RowMapper<DeptDto> rowMapper = new RowMapper<DeptDto>() {
+
+		@Override
+		public DeptDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+			DeptDto bean = new DeptDto();
+			return bean;
+		}
+	};
+
+	public List<DeptDto> selectAll() {
+		String sql = "select * from dept";
+		return getJdbcTemplate().query(sql, rowMapper);
+	}
+
+}

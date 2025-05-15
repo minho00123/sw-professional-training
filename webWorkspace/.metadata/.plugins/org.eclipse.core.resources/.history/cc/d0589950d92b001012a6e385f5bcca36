@@ -1,9 +1,0 @@
-package com.web20.controller;
-
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-
-@WebServlet(value = "/bbs/add.do")
-public class AddController extends HttpServlet {
-
-}

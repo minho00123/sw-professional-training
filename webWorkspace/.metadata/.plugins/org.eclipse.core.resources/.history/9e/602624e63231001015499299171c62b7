@@ -1,0 +1,10 @@
+package com.my.module;
+
+public class Module07 implements MyModule {
+
+	@Override
+	public void func01() {
+
+	}
+
+}

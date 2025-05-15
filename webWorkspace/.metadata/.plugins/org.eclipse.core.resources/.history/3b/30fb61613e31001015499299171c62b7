@@ -1,0 +1,39 @@
+package com.my.model;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.mysql.cj.jdbc.MysqlDataSource;
+
+public class DeptDaoImpl extends JdbcDaoSupport {
+	Logger log = Logger.getLogger(this.getClass());
+
+	RowMapper<DeptDto> rowMapper = new RowMapper<DeptDto>() {
+
+		@Override
+		public DeptDto mapRow(ResultSet rs, int rowNum) throws SQLException {
+			DeptDto bean = new DeptDto(rs.getInt("deptno"), rs.getString("dname"), rs.getString("loc"));
+			log.debug(bean);
+			return bean;
+		}
+	};
+	
+	public DeptDaoImpl() {
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setURL("jdbc:mysql://localhost:33306/xe");
+		dataSource.setUser("scott");
+		dataSource.setPassword("tiger");
+		setDataSource(dataSource);
+	}
+
+	public List<DeptDto> selectAll() {
+		String sql = "select * from dept";
+		return getJdbcTemplate().query(sql, rowMapper);
+	}
+
+}

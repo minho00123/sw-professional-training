@@ -1,0 +1,11 @@
+package com.my.module;
+
+public class Module07 implements MyModule {
+
+	@Override
+	public void func01() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

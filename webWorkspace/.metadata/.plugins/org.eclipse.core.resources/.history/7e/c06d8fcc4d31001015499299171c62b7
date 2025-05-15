@@ -1,0 +1,8 @@
+package com.my.service;
+
+public class Service02 {
+	
+	public void exec() {
+		
+	}
+}

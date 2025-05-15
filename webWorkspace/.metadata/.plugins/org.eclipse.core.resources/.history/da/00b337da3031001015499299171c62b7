@@ -1,0 +1,11 @@
+package com.my.module;
+
+public class Module04 implements MyModule {
+	String[] arr;
+	
+	@Override
+	public void func01() {
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.my;
+
+import com.my.module.*;
+import com.my.service.Service01;
+
+public class App {
+
+	// Ioc 제어의 역전
+	public static void main(String[] args) {
+		Service01 service = new Service01();
+		service.serv01(new Module02());
+	}
+
+}

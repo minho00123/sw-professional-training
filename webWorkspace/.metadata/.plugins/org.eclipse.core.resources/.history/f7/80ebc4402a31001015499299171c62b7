@@ -1,0 +1,11 @@
+package com.my.service;
+
+import com.my.module.Module02;
+
+public class Service01 {
+
+	public void serv01() {
+		Module02 module = new Module02();
+		module.func01();
+	}
+}
