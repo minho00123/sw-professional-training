@@ -1,8 +1,0 @@
-package com.my.model;
-
-public class DeptDto {
-	int deptno;
-	String dname, loc;
-	
-	
-}

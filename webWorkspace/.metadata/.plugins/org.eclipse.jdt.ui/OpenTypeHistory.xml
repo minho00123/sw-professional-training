@@ -1,17 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=web16/D:\/webWorkspace\/tomcat-8.5\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet(Servlet.class[Servlet" modifiers="1537" timestamp="1744618555768"/>
-<typeInfo handle="=web16/D:\/webWorkspace\/tomcat-8.5\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet(GenericServlet.class[GenericServlet" modifiers="1057" timestamp="1744618555768"/>
-<typeInfo handle="=web16/D:\/webWorkspace\/tomcat-8.5\/apache-tomcat-8.5.100\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1744618555768"/>
-<typeInfo handle="=web23/src\/main\/java&lt;com.myframework{Controller.java[Controller" modifiers="513" timestamp="1747017978412"/>
-<typeInfo handle="=web22/C:\/Users\/user\/.m2\/repository\/javax\/servlet\/javax.servlet-api\/3.1.0\/javax.servlet-api-3.1.0.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1746692271913"/>
-<typeInfo handle="=web24/src\/main\/java&lt;com.myframework{Controller.java[Controller" modifiers="513" timestamp="1747184791625"/>
-<typeInfo handle="=sts01/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-tx\/3.1.1.RELEASE\/spring-tx-3.1.1.RELEASE.jar&lt;org.springframework.dao.support(DaoSupport.class[DaoSupport" modifiers="1057" timestamp="1747203520116"/>
-<typeInfo handle="=sts02/src\/main\/java&lt;com.my.module{MyModule.java[MyModule" modifiers="513" timestamp="1747271768589"/>
-<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-aop\/3.1.1.RELEASE\/spring-aop-3.1.1.RELEASE.jar&lt;org.springframework.aop(ThrowsAdvice.class[ThrowsAdvice" modifiers="1537" timestamp="1747189533684"/>
-<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/log4j\/log4j\/1.2.17\/log4j-1.2.17.jar&lt;org.apache.log4j.spi(ThrowableRendererSupport.class[ThrowableRendererSupport" modifiers="1537" timestamp="1747276475769"/>
-<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/aopalliance\/aopalliance\/1.0\/aopalliance-1.0.jar&lt;org.aopalliance.intercept(MethodInterceptor.class[MethodInterceptor" modifiers="1537" timestamp="1746754940242"/>
-<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-aop\/3.1.1.RELEASE\/spring-aop-3.1.1.RELEASE.jar&lt;org.springframework.aop(AfterReturningAdvice.class[AfterReturningAdvice" modifiers="1537" timestamp="1747189533684"/>
-<typeInfo handle="=sts01/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-webmvc\/3.1.1.RELEASE\/spring-webmvc-3.1.1.RELEASE.jar&lt;org.springframework.web.servlet.mvc(Controller.class[Controller" modifiers="1537" timestamp="1747189692555"/>
-<typeInfo handle="=sts02/C:\/Users\/user\/.m2\/repository\/org\/springframework\/spring-aop\/3.1.1.RELEASE\/spring-aop-3.1.1.RELEASE.jar&lt;org.springframework.aop(BeforeAdvice.class[BeforeAdvice" modifiers="1537" timestamp="1747189533684"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

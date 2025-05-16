@@ -1,7 +1,0 @@
-package com.my.aop;
-
-import org.springframework.aop.BeforeAdvice;
-
-public class BeforeController implements BeforeAdvice {
-
-}

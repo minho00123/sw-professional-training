@@ -1,7 +1,0 @@
-package com.my.model;
-
-public class BbsDao {
-	public BbsDao() {
-	}
-	
-}

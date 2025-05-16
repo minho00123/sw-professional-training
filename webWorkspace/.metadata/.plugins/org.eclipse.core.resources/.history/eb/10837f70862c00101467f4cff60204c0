@@ -1,7 +1,0 @@
-package com.my.controller;
-
-import javax.servlet.http.HttpServlet;
-
-public class Ex02Controller extends HttpServlet {
-
-}

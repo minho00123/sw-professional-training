@@ -1,8 +1,0 @@
-package com.dept.model;
-
-import org.springframework.jdbc.core.support.JdbcDaoSupport;
-
-public class DeptDao2 extends JdbcDaoSupport {
-
-
-}

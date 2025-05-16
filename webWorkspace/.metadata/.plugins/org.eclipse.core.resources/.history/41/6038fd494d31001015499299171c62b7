@@ -1,5 +1,0 @@
-package com.my.aop;
-
-public class BeforePrint {
-
-}

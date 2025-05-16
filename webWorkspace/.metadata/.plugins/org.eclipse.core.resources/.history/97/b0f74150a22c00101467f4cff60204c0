@@ -1,9 +1,0 @@
-package com.my.model;
-
-import java.sql.Timestamp;
-
-public class BbsDto {
-	private int num;
-	private String sub, content, id;
-	private Timestamp nalja;
-}

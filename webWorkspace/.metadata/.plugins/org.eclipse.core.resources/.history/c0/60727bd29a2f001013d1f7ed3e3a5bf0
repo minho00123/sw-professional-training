@@ -1,6 +1,0 @@
-use xe;
-create table dept(
-	deptno int primary key,
-	dname varchar(6) not null,
-	loc varchar(6)
-);

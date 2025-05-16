@@ -1,9 +1,0 @@
-use xe;
--- dept
-create table dept(
-	deptno int primary key,
-	dname varchar(6) not null,
-	loc varchar(6)
-);
--- dummy data
-insert into dept values (1111, '본사', '서울');

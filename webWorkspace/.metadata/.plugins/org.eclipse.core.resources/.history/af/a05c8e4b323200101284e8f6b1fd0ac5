@@ -1,0 +1,8 @@
+package com.my.sts04;
+
+public class DeptDao {
+
+	public void func01() {
+		System.out.println("func01 run...");
+	}
+}
