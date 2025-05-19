@@ -1,0 +1,5 @@
+package com.my.sts05.model;
+
+public class DeptVo {
+
+}

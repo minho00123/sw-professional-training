@@ -1,0 +1,21 @@
+package com.my.sts05.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Ex02Controller {
+
+	@RequestMapping("/ex11.do")
+	public String ex11() {
+		return "ex01";
+	}
+	
+	@RequestMapping("/ex12.do")
+	public String ex12(HttpServletRequest req) {
+		req.setAttribute("msg", "hello");
+		return "ex01";
+	}
+}

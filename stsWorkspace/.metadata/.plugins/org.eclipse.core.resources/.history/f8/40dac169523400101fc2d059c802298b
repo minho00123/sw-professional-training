@@ -1,0 +1,13 @@
+package com.my.sts05.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Ex02Controller {
+
+	@RequestMapping("/ex11.do")
+	public String ex11() {
+		return "ex01";
+	}
+}

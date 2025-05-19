@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+D:\stsWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\288418427.index
+\sts05\src\main\java
+D:\stsWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3635821825.index
+\sts05\src\main\java
+D:\stsWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4189898393.index
+\sts05\src\main\java

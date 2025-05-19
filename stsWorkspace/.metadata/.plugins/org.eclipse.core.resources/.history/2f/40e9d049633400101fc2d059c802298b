@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath }/css/bootstrap.min.css">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+	crossorigin="anonymous"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath }/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="${pageContext.request.contextPath }/">
+					한국IT여성기업인협회 </a>
+			</div>
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="${pageContext.request.contextPath }/">home</a></li>
+					<li><a href="${pageContext.request.contextPath }/intro">intro</a></li>
+					<li><a href="${pageContext.request.contextPath }/dept/list">dept</a></li>
+					<li><a href="${pageContext.request.contextPath }/login/">login</a></li>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="col-md-12">
+			<!-- begin -->
+			<!-- end -->
+		</div>
+		<div class="col-md-12">
+			<address>
+				<strong>©한국IT여성기업인협회 Inc. All Rights Reserved.</strong><br>
+				(06130) 서울 강남구 테헤란로 7길 22, 한국과학기술회관 1관 303호<br> <abbr
+					title="Phone">P:</abbr> 02-6956-9523, 02-6956-9540
+			</address>
+		</div>
+	</div>
+</body>
+</html>
