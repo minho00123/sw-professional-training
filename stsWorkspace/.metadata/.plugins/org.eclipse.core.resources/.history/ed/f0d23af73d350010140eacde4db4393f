@@ -1,0 +1,34 @@
+package com.my.sts.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class DeptServiceTest {
+
+	@Test
+	public void testSelectAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSelect() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddOne() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEditOne() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelOne() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.my.sts.aop;
+
+public class MyAop {
+
+}

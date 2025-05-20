@@ -1,0 +1,16 @@
+package com.my.sts.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.my.sts.model.DeptDao;
+
+@Service
+public class DeptService {
+	@Autowired
+	DeptDao deptDao;
+	
+	public void selectAll() {
+		
+	}
+}

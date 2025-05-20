@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<context:annotation-config />
+	<context:component-scan
+		base-package="com.my.sts" />
+
+	<bean id="methodBeforeAdvice" class="com.my.sts.aop.MyBefore"></bean>
+
+	<aop:config>
+		<aop:pointcut expression="execution(* xyz.service.*.*(..)) " id="cut" />
+		<aop:advisor advice-ref="methodBeforeAdvice"
+			pointcut-ref="cut" />
+	</aop:config>
+
+	<!-- <bean id="myService" class="com.my.sts.di.MyService"> <property name="module" 
+		ref="myModule"></property> </bean> <bean id="nalja" class="java.util.Date"></bean> 
+		<bean id="myModule" class="com.my.sts.di.MyModule01"> <property name="su1" 
+		value="1111"></property> <property name="su2" value="3.14"></property> <property 
+		name="ch3" value="A"></property> <property name="boo" value="true"></property> 
+		<property name="msg" value="hello"></property> <property name="nalja"> <ref 
+		bean="nalja" /> </property> </bean> -->
+
+</beans>

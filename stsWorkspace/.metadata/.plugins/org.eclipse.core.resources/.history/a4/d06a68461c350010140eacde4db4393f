@@ -1,0 +1,28 @@
+package com.my.sts.di;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MyServiceTest {
+	static ApplicationContext ac;
+	MyService my;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+//		my = ac.getBean(MyService.class);
+	}
+
+	@Test
+	public void testService() {
+		my.service();
+	}
+
+}

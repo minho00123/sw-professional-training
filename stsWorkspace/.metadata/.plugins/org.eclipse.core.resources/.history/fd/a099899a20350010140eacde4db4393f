@@ -1,0 +1,20 @@
+package com.my.sts.aop;
+
+public class MyService2 {
+
+	public void func01() {
+		
+	}
+	public void func02() {
+		
+	}
+	public void func03() {
+		
+	}
+	public void func04() {
+		
+	}
+	public void func05() {
+		
+	}
+}

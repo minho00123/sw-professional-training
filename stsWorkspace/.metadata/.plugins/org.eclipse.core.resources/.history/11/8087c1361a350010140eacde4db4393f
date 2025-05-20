@@ -1,0 +1,10 @@
+package com.my.sts.di;
+
+public class MyService {
+	MyModule module;
+
+	public void service() {
+		module.func01();
+	}
+
+}

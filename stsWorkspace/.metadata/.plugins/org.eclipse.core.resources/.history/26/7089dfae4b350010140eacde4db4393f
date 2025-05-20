@@ -1,0 +1,22 @@
+package com.my.sts.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.my.sts.service.DeptService;
+
+@Controller
+@RequestMapping("/dept/")
+public class DeptController {
+	@Autowired
+	DeptService deptService;
+
+	@RequestMapping("")
+	public String list(Model model) {
+		deptService.selectAll(model);
+		return "dept/list";
+	}
+
+}

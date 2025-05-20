@@ -1,0 +1,38 @@
+package com.my.sts.aop;
+
+import java.util.Arrays;
+
+import org.aspectj.lang.JoinPoint;
+
+public class MyAop {
+
+	public void beforeMethod(JoinPoint join) {
+		System.out.println("진짜 수행 전...");
+		//this
+		Object obj = join.getThis();
+		// args
+		Object[] arr = join.getArgs();
+		// method name
+		String name = join.getSignature().getName();
+
+		System.out.println(name);
+	}
+
+	public void afterReturn(JoinPoint join, Object val) {
+		System.out.println("진짜 수행 후... 성공:" + val);
+	}
+
+	public void afterErr(JoinPoint join, Exception ex) {
+		System.out.println("진짜 수행 후... 실패:" + ex.getLocalizedMessage());
+	}
+
+	public void afterMethod() {
+		System.out.println("진짜 수행 후");
+	}
+
+	public void around() {
+		System.out.println("");
+		System.out.println("");
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.my.sts.di;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@Configuration(value = "classpath:/applicationContext.xml")
+public class MyServiceTest {
+//	static ApplicationContext ac;
+	@Autowired
+	MyService myService;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+//		ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+//		my = ac.getBean(MyService.class);
+	}
+
+	@Test
+	public void testService() {
+		myService.service();
+	}
+
+}

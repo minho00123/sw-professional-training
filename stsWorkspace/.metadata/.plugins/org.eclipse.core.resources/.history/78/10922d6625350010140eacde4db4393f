@@ -1,0 +1,13 @@
+package com.my.sts.aop;
+
+public class MyAop {
+
+	public void beforeMethod() {
+		System.out.println("진짜 수행 전...");
+	}
+
+	public void afterMethod() {
+		System.out.println("진짜 수행 후...");
+	}
+
+}

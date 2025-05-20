@@ -1,0 +1,9 @@
+package com.my.sts.di;
+
+public class Module01 {
+	
+	public void func01() {
+		System.out.println();
+	}
+	
+}

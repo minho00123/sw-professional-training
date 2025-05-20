@@ -1,0 +1,68 @@
+package com.my.sts.service;
+
+import static org.junit.Assert.fail;
+
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.ui.Model;
+import org.springframework.validation.support.BindingAwareModelMap;
+
+import com.my.sts.model.DeptVo;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration("classpath:/applicationContext.xml")
+public class DeptServiceTest {
+	@Autowired
+	DeptService deptService;
+	Model model;
+	DeptVo target;
+
+	@Before
+	public void initModel() {
+		model = new BindingAwareModelMap();
+	}
+	
+	@Before
+	public void initTarget() {
+		target = new DeptVo(1111, "test", "test");
+	}
+
+	@Test
+	public void testList() {
+		deptService.selectAll(model);
+		Map<String, Object> map = model.asMap();
+		Set<Entry<String, Object>> entrys = map.entrySet();
+		for (Entry<String, Object> entry : entrys) {
+			System.out.println(entry);
+		}
+	}
+
+	@Test
+	public void testDept() {
+		deptService.select(model, deptno);
+	}
+
+	@Test
+	public void testAddOne() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEditOne() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelOne() {
+		fail("Not yet implemented");
+	}
+
+}
