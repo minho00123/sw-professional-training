@@ -1,9 +1,0 @@
-package com.my.sts.aop;
-
-public class MyAop {
-
-	public void before() {
-		System.out.println("½ÇÇàÀü...");
-	}
-	
-}

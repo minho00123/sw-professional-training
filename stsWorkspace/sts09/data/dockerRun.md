@@ -1,0 +1,16 @@
+###
+```bash
+docker run -it -p 8080:8080 --network net01 -v D:\stsWorkspace\sts09:/data maven:3.9.9-amazoncorretto-8-alpine sh
+
+	cd /data
+	mvn package
+	
+	cd ~
+	wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz
+	tar -zvxf apache-tomcat-9.0.105.tar.gz
+	sh ~/apache-tomcat-9.0.105/bin/startup.sh&
+	cp /data/target/sts-1.0.0-BUILD-SNAPSHOT.war ./apache-tomcat-9.0.105/webapps/ROOT.war
+	
+	cd ~/apache-tomcat-9.0.105/webapps/ROOT/
+
+```

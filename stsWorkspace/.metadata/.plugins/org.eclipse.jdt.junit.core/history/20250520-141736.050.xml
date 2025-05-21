@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptDaoTest" project="sts06" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.my.sts.model.DeptDaoTest" time="1.093">
-    <testcase name="testSelectAll" classname="com.my.sts.model.DeptDaoTest" time="1.092"/>
-    <testcase name="test" classname="com.my.sts.model.DeptDaoTest" time="0.0"/>
-    <testcase name="testSelect" classname="com.my.sts.model.DeptDaoTest" time="0.001"/>
-  </testsuite>
-</testrun>

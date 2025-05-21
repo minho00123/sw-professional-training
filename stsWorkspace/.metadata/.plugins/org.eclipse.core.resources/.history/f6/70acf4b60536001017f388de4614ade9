@@ -1,0 +1,5 @@
+package com.my.sts.login.controller;
+
+public class LoginController {
+
+}
