@@ -1,6 +1,0 @@
-package com.my.sts.dept.controller;
-
-@Controller
-public class DeptController {
-
-}

@@ -1,6 +1,0 @@
-package com.my.sts.dept.model;
-
-public interface DeptDao {
-
-	List<DeptVo> selectAll();
-}
