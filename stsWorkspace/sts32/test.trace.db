@@ -1,0 +1,12 @@
+2025-06-13 14:30:10.210361+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "emp" already exists; SQL statement:
+create table emp( num int primary key, id varchar(16), email varchar(16), pw varchar(64) ) [42101-232]
+2025-06-13 14:31:07.542271+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "emp" already exists; SQL statement:
+create table emp( num int primary key, id varchar(16), email varchar(16), pw varchar(64) ) [42101-232]
+2025-06-13 14:31:34.615515+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "emp" already exists; SQL statement:
+create table emp( num int primary key, id varchar(16), email varchar(16), pw varchar(64) ) [42101-232]
+2025-06-13 14:35:35.040419+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table emp [*]if not exists"; SQL statement:
+drop table emp if not exists [42000-232]
