@@ -22,8 +22,9 @@ public class Dept {
     int deptno;
     String dname;
     String loc;
-
-    public DeptVo voBuild() {
-        return DeptVo.builder().deptno(deptno).dname(dname).loc(loc).build();
+    public DeptVo voBuild(){
+        return DeptVo.builder()
+                    .deptno(deptno).dname(dname).loc(loc)
+                    .build();
     }
 }

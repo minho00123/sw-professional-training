@@ -2,6 +2,7 @@ package com.sts.control_dept;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.client.RestTemplateBuilderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,8 +14,7 @@ public class ControlDeptApplication {
 	}
 
 	@Bean
-	RestTemplate restTemplate() {
+	RestTemplate restTemplate(){
 		return new RestTemplate();
 	}
-
 }

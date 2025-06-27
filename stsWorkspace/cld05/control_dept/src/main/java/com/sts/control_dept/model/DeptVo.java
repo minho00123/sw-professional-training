@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class DeptVo implements Serializable {
+public class DeptVo implements Serializable{
     int deptno;
     String dname, loc;
 }

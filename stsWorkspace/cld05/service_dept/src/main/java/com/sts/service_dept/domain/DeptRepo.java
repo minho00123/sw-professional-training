@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.sts.service_dept.domain.entity.Dept;
 
-public interface DeptRepo extends CrudRepository<Dept, Integer> {
+
+public interface DeptRepo extends CrudRepository<Dept,Integer> {
     Optional<Dept> findByDname(String dname);
 }
