@@ -1,0 +1,26 @@
+services:
+  master:
+    image: mysql:8-debian
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: xe
+      MYSQL_USER: scott
+      MYSQL_PASSWORD: tiger
+    networks:
+      - net01
+
+
+  second:
+    image: mysql:8-debian
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: xe
+      MYSQL_USER: scott
+      MYSQL_PASSWORD: tiger
+    networks:
+      - net01
+
+networks:
+  net01: 
+    driver: bridge
+      

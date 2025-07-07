@@ -1,0 +1,6 @@
+services:
+  cld07:
+    image: cld07
+    build:
+      context: .
+      dockerfile: ./Dockerfile
